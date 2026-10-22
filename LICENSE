@@ -1,0 +1,14 @@
+Copyright (c) 2026 Michał Sarna. All rights reserved.
+
+This repository holds the website of the Creator apps (https://michalsarna.github.io/creatorapps/):
+its texts, layout, styles, pictures and the build script.
+
+You may view the website and link to it. No other right is granted: you may not copy, modify,
+republish, redistribute or host this website or any part of it, in whole or in part, without the
+prior written permission of the copyright holder.
+
+The programs shown on the website (LightCreator, MillCreator, PenCreator and baseCreator) are
+separate projects with their own licences (MIT OR Apache-2.0), published in their own repositories.
+This notice does not change those licences.
+
+THE WEBSITE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
