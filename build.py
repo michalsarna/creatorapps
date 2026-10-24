@@ -361,3 +361,23 @@ if __name__ == "__main__":
             )
         out.write_text(html, encoding="utf-8")
         print("wrote", out.relative_to(ROOT))
+
+    # For search engines: both languages, each pointing at the other.
+    urls = "".join(
+        f"""  <url>
+    <loc>{BASE}{T[lang]["path"]}</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="{BASE}"/>
+    <xhtml:link rel="alternate" hreflang="pl" href="{BASE}pl/"/>
+  </url>
+"""
+        for lang in T
+    )
+    (ROOT / "sitemap.xml").write_text(
+        f"""<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+{urls}</urlset>
+""",
+        encoding="utf-8",
+    )
+    (ROOT / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {BASE}sitemap.xml\n", encoding="utf-8")
+    print("wrote sitemap.xml, robots.txt")

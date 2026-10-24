@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://michalsarna.github.io/creatorapps/sitemap.xml
