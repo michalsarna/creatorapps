@@ -190,6 +190,28 @@ ICONS = {
 }
 
 
+def json_ld(lang):
+    """Structured data for search engines: the three programs as free software applications."""
+    t = T[lang]
+    apps = [
+        {
+            "@type": "SoftwareApplication",
+            "name": repo,
+            "description": t["apps"][aid]["text"],
+            "applicationCategory": "DesignApplication",
+            "operatingSystem": "Windows, macOS, Linux",
+            "softwareVersion": VERSIONS[repo].lstrip("v"),
+            "url": GH + repo,
+            "downloadUrl": f"{GH}{repo}/releases/latest",
+            "license": ["https://opensource.org/license/mit", "https://www.apache.org/licenses/LICENSE-2.0"],
+            "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"},
+            "author": {"@type": "Person", "name": "Michał Sarna"},
+        }
+        for aid, repo, _, _ in APPS
+    ]
+    return json.dumps({"@context": "https://schema.org", "@graph": apps}, ensure_ascii=False, indent=1).replace("</", "<\\/")
+
+
 def esc(s):
     return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
@@ -264,6 +286,7 @@ def page(lang):
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#1f2125">
 <link rel="icon" href="{up}img/favicon.png">
+<script type="application/ld+json">{json_ld(lang)}</script>
 <link rel="stylesheet" href="{up}style.css">
 <script>try{{localStorage.setItem("creatorapps-lang","{lang}")}}catch(e){{}}</script>
 </head>
