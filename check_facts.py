@@ -3,6 +3,7 @@
 
 Exit code 1 and a list of differences when something is stale; run by the Check workflow every week and on every push.
 """
+import json
 import re
 import sys
 import urllib.request
@@ -36,6 +37,12 @@ pictures, categories = int(m.group(1)), int(m.group(2))
 for m in re.finditer(r"(\d+) (?:pictures|obrazków) (?:in|w) (\d+) (?:categories|kategoriach)", build):
     expect("clipart pictures", int(m.group(1)), pictures)
     expect("clipart categories", int(m.group(2)), categories)
+
+# Versions: versions.json is the newest release of each program.
+stored = json.loads((Path(__file__).parent / "versions.json").read_text())
+for app, tag in stored.items():
+    with urllib.request.urlopen(f"https://api.github.com/repos/michalsarna/{app}/releases/latest", timeout=30) as r:
+        expect(f"{app} version (run update_versions.py and build.py)", tag, json.load(r)["tag_name"])
 
 if problems:
     print("The page is out of date:")

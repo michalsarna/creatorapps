@@ -154,3 +154,5 @@ tbody th img { width: 28px; }
   .btn.big { width: 100%; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+
+.ver { display: inline-block; font-size: .82rem; color: var(--muted); font-variant-numeric: tabular-nums; margin-left: 4px; }

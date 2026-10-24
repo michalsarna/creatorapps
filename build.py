@@ -4,9 +4,11 @@
 Edit the texts in T below and run `python3 build.py`. The generated pages are committed,
 so GitHub Pages serves the repository as it is.
 """
+import json
 from pathlib import Path
 
 ROOT = Path(__file__).parent
+VERSIONS = json.loads((ROOT / "versions.json").read_text())  # from update_versions.py
 BASE = "https://michalsarna.github.io/creatorapps/"
 GH = "https://github.com/michalsarna/"
 BMC = "https://buymeacoffee.com/michalsarna"
@@ -215,7 +217,7 @@ def page(lang):
             <img src="{up}img/{icon}.png" alt="" width="64" height="64">
             <div><h3>{repo}</h3><p class="tag">{esc(a["tag"])}</p></div>
           </header>
-          <span class="status{early}">{esc(a["status"])}</span>
+          <span class="status{early}">{esc(a["status"])}</span> <span class="ver">{VERSIONS[repo]}</span>
           <p>{esc(a["text"])}</p>
           <ul class="checks">{pts}</ul>
           <div class="actions">
@@ -232,7 +234,7 @@ def page(lang):
     )
     plist = "".join(f"<li>{CHECK}{esc(p)}</li>" for p in t["plugins_list"])
     rows = "".join(
-        f"""<tr><th scope="row"><img src="{up}img/{icon}.png" alt="" width="28" height="28">{repo}</th>
+        f"""<tr><th scope="row"><img src="{up}img/{icon}.png" alt="" width="28" height="28">{repo} <span class="ver">{VERSIONS[repo]}</span></th>
           <td><a href="{GH}{repo}/releases/latest">{esc(t["dl_win"])}</a></td>
           <td><a href="{GH}{repo}/releases/latest">{esc(t["dl_mac"])}</a></td>
           <td><a href="{GH}{repo}/releases/latest">{esc(t["dl_linux"])}</a></td></tr>"""
