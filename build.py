@@ -41,13 +41,13 @@ T = {
             "lc": {
                 "tag": "Laser engravers and cutters",
                 "text": "An open-source alternative to LightBurn. Cut layers, line, fill and image engraving with six dithering methods, a camera overlay, a toolpath preview with the time of the job and a G-code viewer.",
-                "points": ["GRBL and Marlin over a serial port or the network", "Ruida / Trocen jobs as PLT / DXF", "Tested on a Sculpfun S9 diode laser"],
+                "points": ["GRBL (0.7 to 1.1 and newer) and Marlin over a serial port or the network", "Ruida / Trocen jobs as PLT / DXF", "Tested on a Sculpfun S9 diode laser"],
                 "shots": ["The editor with the Properties tab", "The preview of a job"],
                 "status": "Works on a real machine",
             },
             "mc": {
                 "tag": "CNC milling machines",
-                "text": "Layers with an operation (outside, inside, on the line, pocket, drill) and a bit from the library, a 3D preview of the material, picture engraving and 3D relief, streaming to GRBL with probing and macros.",
+                "text": "Layers with an operation (outside, inside, on the line, pocket, drill) and a bit from the library, a 3D preview of the material, picture engraving and 3D relief, streaming to GRBL (0.7 to 1.1 and newer) with probing and macros.",
                 "points": ["Bit library with seven kinds of bits", "3D view and an animated simulation", "Tested on a TwoTrees TTC450Pro"],
                 "shots": ["The 3D preview of the cuts", "The Control tab: START / STOP, position, jogging"],
                 "status": "Works on a real machine",
@@ -55,7 +55,7 @@ T = {
             "pc": {
                 "tag": "Pen plotters",
                 "text": "Pens as layers: colour, width, speed, outline and fill lines. A plot preview with the pen-up moves, the number of lifts and the time, stroke ordering to shorten the moves, and a pause to change the pen.",
-                "points": ["Z axis or a servo pen lift", "Pen library with the mark each pen makes", "Pictures drawn with dots or hatching"],
+                "points": ["Z axis or a servo pen lift, GRBL 0.7 to 1.1 and newer", "Pen library with the mark each pen makes", "Pictures drawn with dots or hatching"],
                 "shots": ["The plot preview", "Pens as layers"],
                 "status": "Early: not yet tried on a real plotter",
             },
@@ -120,13 +120,13 @@ T = {
             "lc": {
                 "tag": "Grawerki i wycinarki laserowe",
                 "text": "Otwarta alternatywa dla LightBurna. Warstwy cięcia, grawerowanie liniami, wypełnieniem i obrazem z sześcioma metodami ditheringu, nakładka z kamery, podgląd ścieżek z czasem pracy i przeglądarka G-code.",
-                "points": ["GRBL i Marlin przez port szeregowy lub sieć", "Zadania dla Ruida / Trocen jako PLT / DXF", "Przetestowany na laserze diodowym Sculpfun S9"],
+                "points": ["GRBL (od 0.7 do 1.1 i nowszych) i Marlin przez port szeregowy lub sieć", "Zadania dla Ruida / Trocen jako PLT / DXF", "Przetestowany na laserze diodowym Sculpfun S9"],
                 "shots": ["Edytor z zakładką Właściwości", "Podgląd zadania"],
                 "status": "Działa na prawdziwej maszynie",
             },
             "mc": {
                 "tag": "Frezarki CNC",
-                "text": "Warstwy z operacją (na zewnątrz, wewnątrz, po linii, kieszeń, wiercenie) i frezem z biblioteki, podgląd materiału w 3D, grawerowanie obrazów i relief 3D, wysyłanie do GRBL z sondowaniem i makrami.",
+                "text": "Warstwy z operacją (na zewnątrz, wewnątrz, po linii, kieszeń, wiercenie) i frezem z biblioteki, podgląd materiału w 3D, grawerowanie obrazów i relief 3D, wysyłanie do GRBL (od 0.7 do 1.1 i nowszych) z sondowaniem i makrami.",
                 "points": ["Biblioteka frezów, siedem rodzajów", "Widok 3D i animowana symulacja", "Przetestowany na TwoTrees TTC450Pro"],
                 "shots": ["Podgląd cięć w 3D", "Zakładka Sterowanie: START / STOP, pozycja, ruch"],
                 "status": "Działa na prawdziwej maszynie",
@@ -134,7 +134,7 @@ T = {
             "pc": {
                 "tag": "Plotery pisakowe",
                 "text": "Pisaki jako warstwy: kolor, grubość, prędkość, kontur i wypełnienie liniami. Podgląd rysowania z ruchami przy podniesionym pisaku, liczbą podniesień i czasem, porządkowanie kresek i pauza na zmianę pisaka.",
-                "points": ["Podnoszenie pisaka osią Z lub serwem", "Biblioteka pisaków ze śladem każdego z nich", "Obrazy rysowane kropkami lub kreskowaniem"],
+                "points": ["Podnoszenie pisaka osią Z lub serwem, GRBL od 0.7 do 1.1 i nowszych", "Biblioteka pisaków ze śladem każdego z nich", "Obrazy rysowane kropkami lub kreskowaniem"],
                 "shots": ["Podgląd rysowania", "Pisaki jako warstwy"],
                 "status": "Wczesna wersja: jeszcze nie sprawdzony na ploterze",
             },
