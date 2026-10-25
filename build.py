@@ -193,6 +193,9 @@ ICONS = {
     7: '<path d="M21 8 12 3 3 8v8l9 5 9-5Z"/><path d="m3 8 9 5 9-5"/><path d="M12 13v8"/>',
     8: '<circle cx="12" cy="12" r="9"/><path d="m12 7 3 3h-2v4h2l-3 3-3-3h2v-4H9Z"/>',
     5: '<path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/>',
+    9: '<path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/><path d="M3 11h18"/>',
+    10: '<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 12h18"/><path d="M12 3v18"/>',
+    11: '<path d="M3 3h18v18H3Z" stroke-dasharray="3 3"/><path d="m9 12 2 2 4-4"/>',
 }
 
 
