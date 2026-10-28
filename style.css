@@ -133,6 +133,8 @@ tbody tr:last-child > * { border-bottom: 0; }
 thead th { color: var(--muted); font-weight: 600; font-size: .9rem; }
 tbody th { display: flex; align-items: center; gap: 10px; white-space: nowrap; }
 tbody th img { width: 28px; }
+.pkg { margin: 2rem 0 .8rem; }
+code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: .88em; word-break: break-all; }
 .note { color: var(--muted); font-size: .93rem; margin: 1rem 0 0; }
 .note.warn { color: var(--text); }
 

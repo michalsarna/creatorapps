@@ -77,11 +77,21 @@ T = {
             ("Tabs of drawings", "Open up to 10 drawings at once, each in its own tab. Ctrl+1…9 switches, Ctrl+W closes, and on exit every unsaved tab is asked about, each with its own recovery file."),
             ("The same Control tab", "Home, Unlock, Pause and Resume, START and STOP, jogging and speed look and work the same in the laser, the mill and the plotter."),
             ("Trace the work first", "Go round the job before you start it: the box in every program, and in LightCreator also the line that wraps all the shapes, like a rubber band."),
+            ("One element at a time", "Burn, cut or draw each element completely, all its layers and passes, before the next one, or only what you have selected: two switches in the Control tab."),
+            ("The camera beside your drawing", "The live camera view as a tab next to your drawings, fitted to the window, or in a window of its own."),
+            ("Pen change at a place of the machine", "PenCreator drives to the place where the pen is changed, runs the G-code of your mechanism and stops there. Not yet tried on a real plotter."),
         ],
         "plugins_title": "Plugins",
         "plugins_text": "Install generators, importers and G-code postprocessors from the official list with one click: Settings → Plugins… → Official plugins. Each one runs in a sandbox and works in every program that can use it.",
         "plugins_list": ["Circuit boards from KiCad, Gerber, EAGLE and EasyEDA", "Boxes with finger joints for a laser", "Nets of boxes to cut out of card", "Fractals, gears, holes on a circle", "STL projection, x,y point files"],
         "plugins_btn": "See all plugins",
+        "dl_pkg_title": "Or with a package manager",
+        "dl_pkg_rows": [
+            ("macOS · Homebrew", "brew install --cask michalsarna/tap/lightcreator"),
+            ("Windows · Scoop", "scoop bucket add creator https://github.com/michalsarna/scoop-bucket"),
+            ("Windows · Scoop", "scoop install lightcreator"),
+        ],
+        "dl_pkg_note": "Use millcreator or pencreator in place of lightcreator for the other programs. The same commands update to every new release. winget (MichalSarna.LightCreator and the others) follows once Microsoft has accepted the packages.",
         "dl_title": "Download",
         "dl_text": "Every release has ready packages. Pick your program and your system; the link takes you to the newest version.",
         "dl_cols": ["Windows", "macOS", "Linux"],
@@ -156,11 +166,21 @@ T = {
             ("Zakładki rysunków", "Do 10 rysunków naraz, każdy w osobnej zakładce. Ctrl+1…9 przełącza, Ctrl+W zamyka, a przy wyjściu program pyta o każdą niezapisaną zakładkę i trzyma dla niej osobny plik odzyskiwania."),
             ("Ta sama zakładka Sterowanie", "Home, Unlock, Pause i Resume, START i STOP, ruch i prędkość wyglądają i działają tak samo w laserze, frezarce i ploterze."),
             ("Obrysuj pracę przed startem", "Obejdź zadanie, zanim je uruchomisz: prostokąt w każdym programie, a w LightCreatorze także linię otaczającą wszystkie kształty, jak gumka."),
+            ("Element po elemencie", "Wypalaj, wycinaj lub rysuj każdy element w całości, ze wszystkimi warstwami i przejściami, zanim zacznie się następny, albo tylko to, co zaznaczysz: dwa przełączniki w zakładce Sterowanie."),
+            ("Kamera obok rysunku", "Obraz z kamery na żywo jako karta obok rysunków, dopasowany do okna, albo w osobnym oknie."),
+            ("Zmiana pisaka w miejscu maszyny", "PenCreator jedzie w miejsce zmiany pisaka, wykonuje G-code Twojego mechanizmu i zatrzymuje się tam. Jeszcze nie sprawdzone na prawdziwym ploterze."),
         ],
         "plugins_title": "Wtyczki",
         "plugins_text": "Generatory, importery i postprocesory G-code instalujesz jednym kliknięciem z oficjalnej listy: Ustawienia → Wtyczki… → Oficjalne wtyczki. Każda działa w piaskownicy i we wszystkich programach, które mogą jej użyć.",
         "plugins_list": ["Płytki PCB z KiCad, Gerber, EAGLE i EasyEDA", "Pudełka na wczepy do lasera", "Siatki brył do wycięcia z kartonu", "Fraktale, koła zębate, otwory na okręgu", "Rzut STL, pliki punktów x,y"],
         "plugins_btn": "Zobacz wszystkie wtyczki",
+        "dl_pkg_title": "Albo przez menedżer pakietów",
+        "dl_pkg_rows": [
+            ("macOS · Homebrew", "brew install --cask michalsarna/tap/lightcreator"),
+            ("Windows · Scoop", "scoop bucket add creator https://github.com/michalsarna/scoop-bucket"),
+            ("Windows · Scoop", "scoop install lightcreator"),
+        ],
+        "dl_pkg_note": "Dla pozostałych programów wpisz millcreator lub pencreator zamiast lightcreator. Te same polecenia aktualizują do każdego nowego wydania. winget (MichalSarna.LightCreator i pozostałe) pojawi się, gdy Microsoft przyjmie pakiety.",
         "dl_title": "Pobierz",
         "dl_text": "Każde wydanie ma gotowe paczki. Wybierz program i system; link prowadzi do najnowszej wersji.",
         "dl_cols": ["Windows", "macOS", "Linux"],
@@ -196,6 +216,9 @@ ICONS = {
     9: '<path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/><path d="M3 11h18"/>',
     10: '<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 12h18"/><path d="M12 3v18"/>',
     11: '<path d="M3 3h18v18H3Z" stroke-dasharray="3 3"/><path d="m9 12 2 2 4-4"/>',
+    12: '<rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="m14 17 2 2 5-5"/>',
+    13: '<path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3Z"/><circle cx="12" cy="13" r="3"/>',
+    14: '<path d="m12 19 7-7 3 3-7 7-3-3Z"/><path d="m18 13-1.5-7.5L2 2l3.5 14.5L13 18l5-5Z"/><path d="m2 2 7.6 7.6"/><circle cx="11" cy="11" r="2"/>',
 }
 
 
@@ -272,6 +295,7 @@ def page(lang):
         for _, repo, icon, _ in APPS
     )
     th = "".join(f'<th scope="col">{c}</th>' for c in t["dl_cols"])
+    pkg = "".join(f'<tr><th scope="row">{esc(system)}</th><td><code>{esc(cmd)}</code></td></tr>' for system, cmd in t["dl_pkg_rows"])
     other = "".join(f"<li><strong>{esc(h)}</strong> {esc(p)}</li>" for h, p in t["support_other"])
     url = BASE + t["path"]
 
@@ -353,6 +377,9 @@ def page(lang):
       <h2>{esc(t["dl_title"])}</h2>
       <p class="sub">{esc(t["dl_text"])}</p>
       <div class="table"><table><thead><tr><td></td>{th}</tr></thead><tbody>{rows}</tbody></table></div>
+      <h3 class="pkg">{esc(t["dl_pkg_title"])}</h3>
+      <div class="table"><table><tbody>{pkg}</tbody></table></div>
+      <p class="note">{esc(t["dl_pkg_note"])}</p>
       <p class="note">{esc(t["dl_note"])}</p>
       <p class="note warn">⚠️ {esc(t["dl_safety"])}</p>
     </div>
