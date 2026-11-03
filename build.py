@@ -13,13 +13,23 @@ BASE = "https://michalsarna.github.io/creatorapps/"
 GH = "https://github.com/michalsarna/"
 BMC = "https://buymeacoffee.com/michalsarna"
 PLUGINS = "https://michalsarna.github.io/baseCreator-plugins/"
+DRAWING_ROBOT = "https://www.printables.com/model/137296-drawing-robot-arduino-uno-cnc-shield-grbl"
 
 APPS = [
     # id, repo, icon, screenshots
     ("lc", "LightCreator", "lightcreator", ["lc-editor", "lc-preview"]),
     ("mc", "MillCreator", "millcreator", ["mc-3d", "mc-control"]),
     ("pc", "PenCreator", "pencreator", ["pc-plot", "pc-layers"]),
+    ("bc", "baseCreator", "basecreator", ["bc-editor", "bc-page"]),
 ]
+
+# The name of a program, where it differs from the name of its repository.
+NAMES = {"baseCreator": "BaseCreator"}
+
+
+def name_of(repo):
+    return NAMES.get(repo, repo)
+
 
 T = {
     "en": {
@@ -29,14 +39,14 @@ T = {
         "other_label": "Polski",
         "skip": "Skip to content",
         "title": "Creator Apps · free software for lasers, CNC mills and pen plotters",
-        "desc": "LightCreator, MillCreator and PenCreator: free, open-source design and G-code software for laser engravers, CNC mills and pen plotters. Windows, macOS and Linux, 30 languages.",
+        "desc": "LightCreator, MillCreator and PenCreator: free, open-source design and G-code software for laser engravers, CNC mills and pen plotters, and BaseCreator for drawing without a machine. Windows, macOS and Linux, 30 languages.",
         "nav": ["Apps", "Together", "Plugins", "Download", "Support"],
         "hero_kicker": "Free · open source · Windows, macOS, Linux",
         "hero_title": "One family of programs for your <em>laser</em>, <em>CNC mill</em> and <em>pen plotter</em>",
-        "hero_text": "Design or import a drawing, give every layer a job, look at the result in the preview and send G-code to the machine. The same window, the same tools and the same shortcuts in all three programs.",
+        "hero_text": "Design or import a drawing, give every layer a job, look at the result in the preview and send G-code to the machine. The same window, the same tools and the same shortcuts in all the programs. No machine? BaseCreator is the same editor for drawing alone.",
         "cta_download": "Download",
         "cta_support": "Buy me a coffee",
-        "apps_title": "Pick your machine",
+        "apps_title": "Pick your program",
         "apps": {
             "lc": {
                 "tag": "Laser engravers and cutters",
@@ -55,20 +65,27 @@ T = {
             "pc": {
                 "tag": "Pen plotters",
                 "text": "Pens as layers: colour, width, speed, outline and fill lines. A plot preview with the pen-up moves, the number of lifts and the time, stroke ordering to shorten the moves, and a pause to change the pen.",
-                "points": ["Z axis or a servo pen lift, GRBL 0.7 to 1.1 and newer", "Pen library with the mark each pen makes", "Pictures drawn with dots or hatching"],
+                "points": ["Z axis or a servo pen lift, GRBL 0.7 to 1.1 and newer", "Pen library with the mark each pen makes", "Pictures drawn with dots or hatching", ("Tested on a pen plotter built after the ", "Drawing Robot", DRAWING_ROBOT, " (Arduino UNO, CNC Shield, GRBL)")],
                 "shots": ["The plot preview", "Pens as layers"],
-                "status": "Early: not yet tried on a real plotter",
+                "status": "Works on a real machine",
+            },
+            "bc": {
+                "tag": "Drawing, with no machine",
+                "text": "The same editor without devices, G-code or a camera, with a page in place of a work area. It writes the same project files, so a drawing made here can be finished for a machine in the other programs.",
+                "points": ["A page of your own: A5 to A1, Letter, Legal or any size", "The same import and export lists as the other programs", "Plugins that make shapes and read files work here too"],
+                "shots": ["The editor with the Layers tab", "Page setup"],
+                "status": "Drawing only",
             },
         },
         "btn_download": "Download",
         "btn_github": "Source on GitHub",
         "together_title": "Built together, on baseCreator",
-        "together_text": "All three programs share one core, so a new tool or fix lands in every one of them.",
+        "together_text": "All four programs share one core, so a new tool or fix lands in every one of them.",
         "features": [
             ("30 languages", "Polish, English, German, Spanish, Chinese, Hindi, Greek and more. Switch in the start window."),
             ("Windows, macOS, Linux", "Installers for Windows, .dmg for Apple silicon and Intel, .deb and .tar.gz for x86_64 and ARM64."),
             ("Free and open", "MIT or Apache-2.0. No account, no subscription, no telemetry."),
-            ("Imports what you have", "SVG, PDF and Illustrator files, bitmaps with tracing, LightBurn projects (.lbrn2) and UGS Designer designs."),
+            ("The same files everywhere", "Every program imports SVG, PDF and Illustrator files, DXF, bitmaps with tracing, LightBurn projects (.lbrn2) and UGS Designer designs, and exports SVG, PLT and DXF."),
             ("A shared clipart gallery", "310 pictures in 9 categories, your own pictures and online search of open icon collections."),
             ("One project file", "A .cre project keeps one drawing with a section for every program, so you can laser a part and mill another."),
             ("A G-code viewer", "Open any G-code file from the start window, without a project: flat or in 3D, with travel moves, colour by height, size and time."),
@@ -94,7 +111,7 @@ T = {
             ("Windows · Scoop", "scoop bucket add creator https://github.com/michalsarna/scoop-bucket"),
             ("Windows · Scoop", "scoop install lightcreator"),
         ],
-        "dl_pkg_note": "Use millcreator or pencreator in place of lightcreator for the other programs. The same commands update to every new release. winget (MichalSarna.LightCreator and the others) follows once Microsoft has accepted the packages.",
+        "dl_pkg_note": "Use millcreator, pencreator or basecreator in place of lightcreator for the other programs. The same commands update to every new release. winget (MichalSarna.LightCreator and the others) follows once Microsoft has accepted the packages.",
         "dl_title": "Download",
         "dl_text": "Every release has ready packages. Pick your program and your system; the link takes you to the newest version.",
         "dl_cols": ["Windows", "macOS", "Linux"],
@@ -121,14 +138,14 @@ T = {
         "other_label": "English",
         "skip": "Przejdź do treści",
         "title": "Creator Apps · darmowe programy do laserów, frezarek CNC i ploterów",
-        "desc": "LightCreator, MillCreator i PenCreator: darmowe programy open source do projektowania i G-code dla grawerek laserowych, frezarek CNC i ploterów pisakowych. Windows, macOS i Linux, 30 języków.",
+        "desc": "LightCreator, MillCreator i PenCreator: darmowe programy open source do projektowania i G-code dla grawerek laserowych, frezarek CNC i ploterów pisakowych, oraz BaseCreator do rysowania bez maszyny. Windows, macOS i Linux, 30 języków.",
         "nav": ["Programy", "Wspólne", "Wtyczki", "Pobierz", "Wesprzyj"],
         "hero_kicker": "Za darmo · open source · Windows, macOS, Linux",
         "hero_title": "Jedna rodzina programów do <em>lasera</em>, <em>frezarki CNC</em> i <em>plotera</em>",
-        "hero_text": "Narysuj lub zaimportuj projekt, przypisz każdej warstwie zadanie, obejrzyj wynik w podglądzie i wyślij G-code do maszyny. To samo okno, te same narzędzia i te same skróty we wszystkich trzech programach.",
+        "hero_text": "Narysuj lub zaimportuj projekt, przypisz każdej warstwie zadanie, obejrzyj wynik w podglądzie i wyślij G-code do maszyny. To samo okno, te same narzędzia i te same skróty we wszystkich programach. Nie masz maszyny? BaseCreator to ten sam edytor do samego rysowania.",
         "cta_download": "Pobierz",
         "cta_support": "Postaw mi kawę",
-        "apps_title": "Wybierz swoją maszynę",
+        "apps_title": "Wybierz swój program",
         "apps": {
             "lc": {
                 "tag": "Grawerki i wycinarki laserowe",
@@ -147,20 +164,27 @@ T = {
             "pc": {
                 "tag": "Plotery pisakowe",
                 "text": "Pisaki jako warstwy: kolor, grubość, prędkość, kontur i wypełnienie liniami. Podgląd rysowania z ruchami przy podniesionym pisaku, liczbą podniesień i czasem, porządkowanie kresek i pauza na zmianę pisaka.",
-                "points": ["Podnoszenie pisaka osią Z lub serwem, GRBL od 0.7 do 1.1 i nowszych", "Biblioteka pisaków ze śladem każdego z nich", "Obrazy rysowane kropkami lub kreskowaniem"],
+                "points": ["Podnoszenie pisaka osią Z lub serwem, GRBL od 0.7 do 1.1 i nowszych", "Biblioteka pisaków ze śladem każdego z nich", "Obrazy rysowane kropkami lub kreskowaniem", ("Testowany na ploterze zbudowanym na wzór ", "Drawing Robot", DRAWING_ROBOT, " (Arduino UNO, CNC Shield, GRBL)")],
                 "shots": ["Podgląd rysowania", "Pisaki jako warstwy"],
-                "status": "Wczesna wersja: jeszcze nie sprawdzony na ploterze",
+                "status": "Działa na prawdziwej maszynie",
+            },
+            "bc": {
+                "tag": "Rysowanie, bez maszyny",
+                "text": "Ten sam edytor bez urządzeń, G-code i kamery, ze stroną zamiast pola roboczego. Zapisuje te same pliki projektu, więc rysunek zrobiony tutaj można przygotować dla maszyny w pozostałych programach.",
+                "points": ["Własna strona: od A5 do A1, Letter, Legal lub dowolny rozmiar", "Te same listy importu i eksportu co w pozostałych programach", "Wtyczki tworzące kształty i czytające pliki działają także tutaj"],
+                "shots": ["Edytor z kartą Warstwy", "Ustawienia strony"],
+                "status": "Tylko rysowanie",
             },
         },
         "btn_download": "Pobierz",
         "btn_github": "Kod na GitHubie",
         "together_title": "Zbudowane razem, na baseCreator",
-        "together_text": "Wszystkie trzy programy mają wspólny rdzeń, więc nowe narzędzie albo poprawka trafia do każdego z nich.",
+        "together_text": "Wszystkie cztery programy mają wspólny rdzeń, więc nowe narzędzie albo poprawka trafia do każdego z nich.",
         "features": [
             ("30 języków", "Polski, angielski, niemiecki, hiszpański, chiński, hindi, grecki i inne. Zmiana w oknie startowym."),
             ("Windows, macOS, Linux", "Instalator dla Windows, .dmg dla Apple silicon i Intela, .deb i .tar.gz dla x86_64 i ARM64."),
             ("Darmowe i otwarte", "Licencja MIT lub Apache-2.0. Bez konta, bez abonamentu, bez telemetrii."),
-            ("Otwiera to, co masz", "Pliki SVG, PDF i Illustrator, bitmapy z wektoryzacją, projekty LightBurn (.lbrn2) i UGS Designer."),
+            ("Te same pliki wszędzie", "Każdy program importuje pliki SVG, PDF i Illustrator, DXF, bitmapy z wektoryzacją, projekty LightBurn (.lbrn2) i UGS Designer oraz eksportuje SVG, PLT i DXF."),
             ("Wspólna galeria clipartów", "310 obrazków w 9 kategoriach, własne obrazki i wyszukiwanie w otwartych kolekcjach ikon."),
             ("Jeden plik projektu", "Projekt .cre trzyma jeden rysunek z sekcją dla każdego programu: jedną część wypalisz laserem, drugą wyfrezujesz."),
             ("Przeglądarka G-code", "Otwórz dowolny plik G-code z okna startowego, bez projektu: płasko lub w 3D, z ruchami jałowymi, kolorem wg wysokości, rozmiarem i czasem."),
@@ -186,7 +210,7 @@ T = {
             ("Windows · Scoop", "scoop bucket add creator https://github.com/michalsarna/scoop-bucket"),
             ("Windows · Scoop", "scoop install lightcreator"),
         ],
-        "dl_pkg_note": "Dla pozostałych programów wpisz millcreator lub pencreator zamiast lightcreator. Te same polecenia aktualizują do każdego nowego wydania. winget (MichalSarna.LightCreator i pozostałe) pojawi się, gdy Microsoft przyjmie pakiety.",
+        "dl_pkg_note": "Dla pozostałych programów wpisz millcreator, pencreator lub basecreator zamiast lightcreator. Te same polecenia aktualizują do każdego nowego wydania. winget (MichalSarna.LightCreator i pozostałe) pojawi się, gdy Microsoft przyjmie pakiety.",
         "dl_title": "Pobierz",
         "dl_text": "Każde wydanie ma gotowe paczki. Wybierz program i system; link prowadzi do najnowszej wersji.",
         "dl_cols": ["Windows", "macOS", "Linux"],
@@ -232,12 +256,12 @@ ICONS = {
 
 
 def json_ld(lang):
-    """Structured data for search engines: the three programs as free software applications."""
+    """Structured data for search engines: the programs as free software applications."""
     t = T[lang]
     apps = [
         {
             "@type": "SoftwareApplication",
-            "name": repo,
+            "name": name_of(repo),
             "description": t["apps"][aid]["text"],
             "applicationCategory": "DesignApplication",
             "operatingSystem": "Windows, macOS, Linux",
@@ -257,6 +281,14 @@ def esc(s):
     return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
 
+def point(p):
+    """A line of a card: a text, or (before, link text, url, after)."""
+    if isinstance(p, str):
+        return esc(p)
+    before, label, url, after = p
+    return f'{esc(before)}<a href="{url}">{esc(label)}</a>{esc(after)}'
+
+
 def page(lang):
     t = T[lang]
     up = "../" if t["path"] else ""
@@ -267,8 +299,8 @@ def page(lang):
     cards = []
     for i, (aid, repo, icon, shots) in enumerate(APPS):
         a = t["apps"][aid]
-        early = " early" if aid == "pc" else ""
-        pts = "".join(f"<li>{CHECK}{esc(p)}</li>" for p in a["points"])
+        early = ""
+        pts = "".join(f"<li>{CHECK}{point(p)}</li>" for p in a["points"])
         figs = "".join(
             f'<figure><img src="{up}img/{s}.webp" alt="{esc(cap)}" width="1280" height="800" loading="lazy"><figcaption>{esc(cap)}</figcaption></figure>'
             for s, cap in zip(shots, a["shots"])
@@ -278,7 +310,7 @@ def page(lang):
         <div class="app-text">
           <header>
             <img src="{up}img/{icon}.png" alt="" width="64" height="64">
-            <div><h3>{repo}</h3><p class="tag">{esc(a["tag"])}</p></div>
+            <div><h3>{name_of(repo)}</h3><p class="tag">{esc(a["tag"])}</p></div>
           </header>
           <span class="status{early}">{esc(a["status"])}</span> <span class="ver">{VERSIONS[repo]}</span>
           <p>{esc(a["text"])}</p>
@@ -297,7 +329,7 @@ def page(lang):
     )
     plist = "".join(f"<li>{CHECK}{esc(p)}</li>" for p in t["plugins_list"])
     rows = "".join(
-        f"""<tr><th scope="row"><img src="{up}img/{icon}.png" alt="" width="28" height="28">{repo} <span class="ver">{VERSIONS[repo]}</span></th>
+        f"""<tr><th scope="row"><img src="{up}img/{icon}.png" alt="" width="28" height="28">{name_of(repo)} <span class="ver">{VERSIONS[repo]}</span></th>
           <td><a href="{GH}{repo}/releases/latest">{esc(t["dl_win"])}</a></td>
           <td><a href="{GH}{repo}/releases/latest">{esc(t["dl_mac"])}</a></td>
           <td><a href="{GH}{repo}/releases/latest">{esc(t["dl_linux"])}</a></td></tr>"""
@@ -356,6 +388,7 @@ def page(lang):
         <a href="#lightcreator"><img src="{up}img/lightcreator.png" alt="" width="72" height="72"><span>LightCreator</span></a>
         <a href="#millcreator"><img src="{up}img/millcreator.png" alt="" width="72" height="72"><span>MillCreator</span></a>
         <a href="#pencreator"><img src="{up}img/pencreator.png" alt="" width="72" height="72"><span>PenCreator</span></a>
+        <a href="#basecreator"><img src="{up}img/basecreator.png" alt="" width="72" height="72"><span>BaseCreator</span></a>
       </div>
     </div>
   </section>
@@ -409,7 +442,7 @@ def page(lang):
 
 <footer class="wrap foot">
   <span>{esc(t["footer"])}</span>
-  <span><a href="{GH}LightCreator">LightCreator</a> · <a href="{GH}MillCreator">MillCreator</a> · <a href="{GH}PenCreator">PenCreator</a> · <a href="{GH}baseCreator">baseCreator</a> · <a href="{BMC}">Buy Me a Coffee</a></span>
+  <span><a href="{GH}LightCreator">LightCreator</a> · <a href="{GH}MillCreator">MillCreator</a> · <a href="{GH}PenCreator">PenCreator</a> · <a href="{GH}baseCreator">BaseCreator</a> · <a href="{BMC}">Buy Me a Coffee</a></span>
 </footer>
 </body>
 </html>

@@ -15,6 +15,8 @@ SOURCES = {
     "mc-control": "MillCreator/docs/screenshots/25-control-tab.png",
     "pc-plot": "PenCreator/docs/screenshots/09-plot.png",
     "pc-layers": "PenCreator/docs/screenshots/05-layers.png",
+    "bc-editor": "baseCreator/docs/basecreator/editor.png",
+    "bc-page": "baseCreator/docs/basecreator/page-setup.png",
 }
 
 for name, src in SOURCES.items():

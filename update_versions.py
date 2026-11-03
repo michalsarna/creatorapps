@@ -5,7 +5,7 @@ import json
 import urllib.request
 from pathlib import Path
 
-APPS = ["LightCreator", "MillCreator", "PenCreator"]
+APPS = ["LightCreator", "MillCreator", "PenCreator", "baseCreator"]
 
 
 def latest(repo):
