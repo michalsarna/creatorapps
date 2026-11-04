@@ -100,6 +100,9 @@ T = {
             ("The milled piece in 3D", "MillCreator shows the material as it will be milled, with the real shape of every bit (on a cylinder when a rotary attachment is chosen), and saves it as an STL model. Own G-code and a work coordinate system (G54 to G59) are in the device settings."),
             ("Preview as a tab", "Pin the preview next to your drawings, in every program, or let it float. Plugins with settings, like the G-code tools, get a tab of their own."),
             ("Levels for pictures", "A histogram with a black and a white point when you import or adjust a picture, and a trace dialog that zooms in on the outlines."),
+            ("Print the drawing", "Print it on a paper printer, to scale or as large as the page allows, to check the placement or use it as a template. Or save it as a PDF."),
+            ("A quick guide", "Help → Quick guide, or F1, explains the program step by step, in English and Polish."),
+            ("A picture under the drawing", "Put a photo under the drawing and line it up with the material. LightCreator, MillCreator and PenCreator can also show the live picture of a camera. The project keeps the picture."),
         ],
         "plugins_title": "Plugins",
         "plugins_text": "Install generators, importers and G-code postprocessors from the official list with one click: Settings → Plugins… → Official plugins. Each one runs in a sandbox and works in every program that can use it.",
@@ -199,6 +202,9 @@ T = {
             ("Sfrezowany element w 3D", "MillCreator pokazuje materiał tak, jak zostanie sfrezowany, z prawdziwym kształtem każdego freza (na walcu, gdy wybrana jest przystawka obrotowa), i zapisuje go jako model STL. Własny G-code i układ współrzędnych roboczych (G54 do G59) są w ustawieniach urządzenia."),
             ("Podgląd jako karta", "Przypnij podgląd obok rysunków, w każdym programie, albo zostaw go w oknie. Wtyczki z ustawieniami, jak G-code tools, mają własną kartę."),
             ("Poziomy dla obrazów", "Histogram z punktem czerni i bieli przy imporcie i korekcie obrazu oraz okno trace, które przybliża kontury."),
+            ("Wydruk rysunku", "Wydrukuj go na zwykłej drukarce, w skali albo tak duży, jak pozwala strona, żeby sprawdzić położenie albo użyć go jako szablonu. Możesz też zapisać PDF."),
+            ("Krótki przewodnik", "Pomoc → Krótki przewodnik albo F1 objaśnia program krok po kroku, po polsku i po angielsku."),
+            ("Obraz pod rysunkiem", "Podłóż zdjęcie pod rysunek i dopasuj je do materiału. LightCreator, MillCreator i PenCreator mogą też pokazać obraz na żywo z kamery. Projekt zachowuje obraz."),
         ],
         "plugins_title": "Wtyczki",
         "plugins_text": "Generatory, importery i postprocesory G-code instalujesz jednym kliknięciem z oficjalnej listy: Ustawienia → Wtyczki… → Oficjalne wtyczki. Każda działa w piaskownicy i we wszystkich programach, które mogą jej użyć.",
@@ -252,6 +258,9 @@ ICONS = {
     15: '<path d="M21 8 12 3 3 8v8l9 5 9-5Z"/><path d="M3 8l9 5 9-5"/><path d="M12 13v8"/><path d="M8 11l-2-1"/>',
     16: '<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M8 4v5"/>',
     17: '<path d="M3 3v18h18"/><path d="M7 17v-4"/><path d="M11 17V8"/><path d="M15 17v-6"/><path d="M19 17V5"/>',
+    18: '<path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/>',
+    19: '<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2Z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7Z"/>',
+    20: '<path d="M4 5h16v14H4Z" stroke-dasharray="3 3"/><path d="m8 15 3-4 2 2 2-3 3 5"/><circle cx="9" cy="9" r="1"/>',
 }
 
 
