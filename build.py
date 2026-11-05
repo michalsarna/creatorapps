@@ -103,6 +103,9 @@ T = {
             ("Print the drawing", "Print it on a paper printer, to scale or as large as the page allows, to check the placement or use it as a template. Or save it as a PDF."),
             ("A quick guide", "Help → Quick guide, or F1, explains the program step by step, in English and Polish."),
             ("A picture under the drawing", "Put a photo under the drawing and line it up with the material. LightCreator, MillCreator and PenCreator can also show the live picture of a camera. The project keeps the picture."),
+            ("USB keyboards and pads", "Drive the machine with a pad or the keyboard: moves while you hold a key, Stop, Home, and the spindle, air, water, laser beam or pen, on the keys you choose. One device can serve many machines, and only the window in front listens."),
+            ("The project on the material", "In MillCreator's 3D view the shapes of the drawing can lie on top of the material, in the colours of their layers, so you can compare them with what the bit will cut."),
+            ("Superman, Batman and Joker", "Three new colour schemes for the window, with Joker in a dark and a light version, 18 in all."),
         ],
         "plugins_title": "Plugins",
         "plugins_text": "Install generators, importers and G-code postprocessors from the official list with one click: Settings → Plugins… → Official plugins. Each one runs in a sandbox and works in every program that can use it.",
@@ -205,6 +208,9 @@ T = {
             ("Wydruk rysunku", "Wydrukuj go na zwykłej drukarce, w skali albo tak duży, jak pozwala strona, żeby sprawdzić położenie albo użyć go jako szablonu. Możesz też zapisać PDF."),
             ("Krótki przewodnik", "Pomoc → Krótki przewodnik albo F1 objaśnia program krok po kroku, po polsku i po angielsku."),
             ("Obraz pod rysunkiem", "Podłóż zdjęcie pod rysunek i dopasuj je do materiału. LightCreator, MillCreator i PenCreator mogą też pokazać obraz na żywo z kamery. Projekt zachowuje obraz."),
+            ("Klawiatury i pady USB", "Steruj maszyną padem albo klawiaturą: ruch, dopóki trzymasz klawisz, Stop, bazowanie oraz wrzeciono, powietrze, woda, wiązka lasera albo pisak na wybranych klawiszach. Jedno urządzenie może obsługiwać wiele maszyn, a naciśnięcia odbiera tylko okno na wierzchu."),
+            ("Projekt na materiale", "W widoku 3D MillCreatora kształty rysunku mogą leżeć na wierzchu materiału, w kolorach warstw, żeby porównać je z tym, co wytnie frez."),
+            ("Superman, Batman i Joker", "Trzy nowe schematy kolorów okna, a Joker w wersji ciemnej i jasnej. Razem jest ich 18."),
         ],
         "plugins_title": "Wtyczki",
         "plugins_text": "Generatory, importery i postprocesory G-code instalujesz jednym kliknięciem z oficjalnej listy: Ustawienia → Wtyczki… → Oficjalne wtyczki. Każda działa w piaskownicy i we wszystkich programach, które mogą jej użyć.",
@@ -261,6 +267,9 @@ ICONS = {
     18: '<path d="M6 9V2h12v7"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/>',
     19: '<path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2Z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7Z"/>',
     20: '<path d="M4 5h16v14H4Z" stroke-dasharray="3 3"/><path d="m8 15 3-4 2 2 2-3 3 5"/><circle cx="9" cy="9" r="1"/>',
+    21: '<line x1="6" x2="10" y1="12" y2="12"/><line x1="8" x2="8" y1="10" y2="14"/><line x1="15" x2="15.01" y1="13" y2="13"/><line x1="18" x2="18.01" y1="11" y2="11"/><rect x="2" y="6" width="20" height="12" rx="2"/>',
+    22: '<path d="m12 2 10 5-10 5L2 7l10-5Z"/><path d="m2 12 10 5 10-5"/><path d="m2 17 10 5 10-5"/>',
+    23: '<circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2a10 10 0 0 0 0 20c1.7 0 3-1.3 3-3 0-.8-.3-1.5-.8-2-.5-.5-.8-1.2-.8-2 0-1.7 1.3-3 3-3h2.4c2.3 0 4.2-1.9 4.2-4.2C23 4.3 18 2 12 2Z"/>',
 }
 
 
