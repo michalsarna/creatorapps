@@ -65,7 +65,7 @@ T = {
             "pc": {
                 "tag": "Pen plotters",
                 "text": "Pens as layers: colour, width, speed, outline and fill lines. A plot preview with the pen-up moves, the number of lifts and the time, stroke ordering to shorten the moves, and a pause to change the pen.",
-                "points": ["Z axis or a servo pen lift, GRBL 0.7 to 1.1 and newer", "Pen library with the mark each pen makes", "Pictures drawn with dots or hatching", ("Tested on a pen plotter built after the ", "Drawing Robot", DRAWING_ROBOT, " (Arduino UNO, CNC Shield, GRBL)")],
+                "points": ["Z axis or a servo pen lift, GRBL 0.7 to 1.1 and newer, AxiDraw / EggBot and HPGL plotters", "Pen library with the mark each pen makes", "Pictures drawn with dots or hatching", ("Tested on a pen plotter built after the ", "Drawing Robot", DRAWING_ROBOT, " (Arduino UNO, CNC Shield, GRBL)")],
                 "shots": ["The plot preview", "Pens as layers"],
                 "status": "Works on a real machine",
             },
@@ -106,6 +106,9 @@ T = {
             ("USB keyboards and pads", "Drive the machine with a pad or the keyboard: moves while you hold a key, Stop, Home, and the spindle, air, water, laser beam or pen, on the keys you choose. One device can serve many machines, and only the window in front listens."),
             ("The project on the material", "In MillCreator's 3D view the shapes of the drawing can lie on top of the material, in the colours of their layers, so you can compare them with what the bit will cut."),
             ("Superman, Batman and Joker", "Three new colour schemes for the window, with Joker in a dark and a light version, 18 in all."),
+            ("AxiDraw, EggBot and HPGL plotters", "PenCreator also drives plotters that do not speak G-code: the AxiDraw and the EggBot (EiBotBoard) and HPGL plotters on a serial port. Not tried on real ones yet."),
+            ("Paste a picture", "Ctrl+V with a screenshot or a picture copied from a browser opens the import window, with its levels, zoom and size."),
+            ("Keys for the nodes", "In node editing D deletes, I inserts, L and S make a line or a curve, C a corner, R rounds and B breaks; a node dropped onto another joins them."),
         ],
         "plugins_title": "Plugins",
         "plugins_text": "Install generators, importers and G-code postprocessors from the official list with one click: Settings → Plugins… → Official plugins. Each one runs in a sandbox and works in every program that can use it.",
@@ -170,7 +173,7 @@ T = {
             "pc": {
                 "tag": "Plotery pisakowe",
                 "text": "Pisaki jako warstwy: kolor, grubość, prędkość, kontur i wypełnienie liniami. Podgląd rysowania z ruchami przy podniesionym pisaku, liczbą podniesień i czasem, porządkowanie kresek i pauza na zmianę pisaka.",
-                "points": ["Podnoszenie pisaka osią Z lub serwem, GRBL od 0.7 do 1.1 i nowszych", "Biblioteka pisaków ze śladem każdego z nich", "Obrazy rysowane kropkami lub kreskowaniem", ("Testowany na ploterze zbudowanym na wzór ", "Drawing Robot", DRAWING_ROBOT, " (Arduino UNO, CNC Shield, GRBL)")],
+                "points": ["Podnoszenie pisaka osią Z lub serwem, GRBL od 0.7 do 1.1 i nowszych, plotery AxiDraw / EggBot i HPGL", "Biblioteka pisaków ze śladem każdego z nich", "Obrazy rysowane kropkami lub kreskowaniem", ("Testowany na ploterze zbudowanym na wzór ", "Drawing Robot", DRAWING_ROBOT, " (Arduino UNO, CNC Shield, GRBL)")],
                 "shots": ["Podgląd rysowania", "Pisaki jako warstwy"],
                 "status": "Działa na prawdziwej maszynie",
             },
@@ -211,6 +214,9 @@ T = {
             ("Klawiatury i pady USB", "Steruj maszyną padem albo klawiaturą: ruch, dopóki trzymasz klawisz, Stop, bazowanie oraz wrzeciono, powietrze, woda, wiązka lasera albo pisak na wybranych klawiszach. Jedno urządzenie może obsługiwać wiele maszyn, a naciśnięcia odbiera tylko okno na wierzchu."),
             ("Projekt na materiale", "W widoku 3D MillCreatora kształty rysunku mogą leżeć na wierzchu materiału, w kolorach warstw, żeby porównać je z tym, co wytnie frez."),
             ("Superman, Batman i Joker", "Trzy nowe schematy kolorów okna, a Joker w wersji ciemnej i jasnej. Razem jest ich 18."),
+            ("Plotery AxiDraw, EggBot i HPGL", "PenCreator steruje też ploterami, które nie mówią G-code: AxiDraw i EggBot (EiBotBoard) oraz plotery HPGL na porcie szeregowym. Jeszcze niesprawdzone na prawdziwych."),
+            ("Wklejanie obrazu", "Ctrl+V ze zrzutem ekranu albo obrazem skopiowanym z przeglądarki otwiera okno importu z poziomami, powiększeniem i rozmiarem."),
+            ("Klawisze węzłów", "W edycji węzłów D usuwa, I wstawia, L i S robią linię albo krzywą, C narożnik, R zaokrągla, a B rozdziela; węzeł upuszczony na inny łączy się z nim."),
         ],
         "plugins_title": "Wtyczki",
         "plugins_text": "Generatory, importery i postprocesory G-code instalujesz jednym kliknięciem z oficjalnej listy: Ustawienia → Wtyczki… → Oficjalne wtyczki. Każda działa w piaskownicy i we wszystkich programach, które mogą jej użyć.",
@@ -270,6 +276,9 @@ ICONS = {
     21: '<line x1="6" x2="10" y1="12" y2="12"/><line x1="8" x2="8" y1="10" y2="14"/><line x1="15" x2="15.01" y1="13" y2="13"/><line x1="18" x2="18.01" y1="11" y2="11"/><rect x="2" y="6" width="20" height="12" rx="2"/>',
     22: '<path d="m12 2 10 5-10 5L2 7l10-5Z"/><path d="m2 12 10 5 10-5"/><path d="m2 17 10 5 10-5"/>',
     23: '<circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2a10 10 0 0 0 0 20c1.7 0 3-1.3 3-3 0-.8-.3-1.5-.8-2-.5-.5-.8-1.2-.8-2 0-1.7 1.3-3 3-3h2.4c2.3 0 4.2-1.9 4.2-4.2C23 4.3 18 2 12 2Z"/>',
+    24: '<path d="M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z"/><path d="m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18"/><path d="m2.3 2.3 7.286 7.286"/><circle cx="11" cy="11" r="2"/>',
+    25: '<path d="M11 14h10"/><path d="M16 4h2a2 2 0 0 1 2 2v1.344"/><path d="m17 18 4-4-4-4"/><path d="M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 1.793-1.113"/><rect x="8" y="2" width="8" height="4" rx="1"/>',
+    26: '<circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><path d="M5 17A12 12 0 0 1 17 5"/>',
 }
 
 
