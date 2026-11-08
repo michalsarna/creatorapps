@@ -50,7 +50,7 @@ T = {
         "apps": {
             "lc": {
                 "tag": "Laser engravers and cutters",
-                "text": "An open-source alternative to LightBurn. Cut layers, line, fill and image engraving with six dithering methods, a camera overlay, a toolpath preview with the time of the job and a G-code viewer.",
+                "text": "An open-source program for laser engravers and cutters. Cut layers, line, fill and image engraving with six dithering methods, a camera overlay, a toolpath preview with the time of the job and a G-code viewer.",
                 "points": ["GRBL (0.7 to 1.1 and newer) and Marlin over a serial port or the network", "Ruida / Trocen jobs as PLT / DXF", "Tested on a Sculpfun S9 diode laser"],
                 "shots": ["The editor with the Properties tab", "The preview of a job"],
                 "status": "Works on a real machine",
@@ -158,7 +158,7 @@ T = {
         "apps": {
             "lc": {
                 "tag": "Grawerki i wycinarki laserowe",
-                "text": "Otwarta alternatywa dla LightBurna. Warstwy cięcia, grawerowanie liniami, wypełnieniem i obrazem z sześcioma metodami ditheringu, nakładka z kamery, podgląd ścieżek z czasem pracy i przeglądarka G-code.",
+                "text": "Otwartoźródłowy program do grawerek i wycinarek laserowych. Warstwy cięcia, grawerowanie liniami, wypełnieniem i obrazem z sześcioma metodami ditheringu, nakładka z kamery, podgląd ścieżek z czasem pracy i przeglądarka G-code.",
                 "points": ["GRBL (od 0.7 do 1.1 i nowszych) i Marlin przez port szeregowy lub sieć", "Zadania dla Ruida / Trocen jako PLT / DXF", "Przetestowany na laserze diodowym Sculpfun S9"],
                 "shots": ["Edytor z zakładką Właściwości", "Podgląd zadania"],
                 "status": "Działa na prawdziwej maszynie",
