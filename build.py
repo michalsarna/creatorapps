@@ -53,21 +53,18 @@ T = {
                 "text": "An open-source program for laser engravers and cutters. Cut layers, line, fill and image engraving with six dithering methods, a camera overlay, a toolpath preview with the time of the job and a G-code viewer.",
                 "points": ["GRBL (0.7 to 1.1 and newer) and Marlin over a serial port or the network", "Ruida / Trocen jobs as PLT / DXF", "Tested on a Sculpfun S9 diode laser"],
                 "shots": ["The editor with the Properties tab", "The preview of a job"],
-                "status": "Works on a real machine",
             },
             "mc": {
                 "tag": "CNC milling machines",
                 "text": "Layers with an operation (outside, inside, on the line, pocket, drill) and a bit from the library, a 3D preview of the material, picture engraving and 3D relief, streaming to GRBL (0.7 to 1.1 and newer) with probing and macros.",
                 "points": ["Bit library with seven kinds of bits", "3D view and an animated simulation", "Tested on a TwoTrees TTC450Pro"],
                 "shots": ["The 3D preview of the cuts", "The Control tab: START / STOP, position, jogging"],
-                "status": "Works on a real machine",
             },
             "pc": {
                 "tag": "Pen plotters",
                 "text": "Pens as layers: colour, width, speed, outline and fill lines. A plot preview with the pen-up moves, the number of lifts and the time, stroke ordering to shorten the moves, and a pause to change the pen.",
                 "points": ["Z axis or a servo pen lift, GRBL 0.7 to 1.1 and newer, AxiDraw / EggBot and HPGL plotters", "Pen library with the mark each pen makes", "Pictures drawn with dots or hatching", ("Tested on a pen plotter built after the ", "Drawing Robot", DRAWING_ROBOT, " (Arduino UNO, CNC Shield, GRBL)")],
                 "shots": ["The plot preview", "Pens as layers"],
-                "status": "Works on a real machine",
             },
             "bc": {
                 "tag": "Drawing, with no machine",
@@ -96,7 +93,7 @@ T = {
             ("Trace the work first", "Go round the job before you start it: the box in every program, and in LightCreator also the line that wraps all the shapes, like a rubber band."),
             ("One element at a time", "Burn, cut or draw each element completely, all its layers and passes, before the next one, or only what you have selected: two switches in the Control tab."),
             ("The camera beside your drawing", "The live camera view (also an RTSP stream) as a tab next to your drawings, fitted to the window, or in a window of its own, with photos, video and a time-lapse every N seconds or after each layer, into a folder you choose."),
-            ("Pen change at a place of the machine", "PenCreator drives to the place where the pen is changed, runs the G-code of your mechanism and stops there. Not yet tried on a real plotter."),
+            ("Pen change at a place of the machine", "PenCreator drives to the place where the pen is changed, runs the G-code of your mechanism and stops there."),
             ("The milled piece in 3D", "MillCreator shows the material as it will be milled, with the real shape of every bit (on a cylinder when a rotary attachment is chosen), and saves it as an STL model. Own G-code and a work coordinate system (G54 to G59) are in the device settings."),
             ("Preview as a tab", "Pin the preview next to your drawings, in every program, or let it float. Plugins with settings, like the G-code tools, get a tab of their own."),
             ("Levels for pictures", "A histogram with a black and a white point when you import or adjust a picture, and a trace dialog that zooms in on the outlines."),
@@ -106,9 +103,12 @@ T = {
             ("USB keyboards and pads", "Drive the machine with a pad or the keyboard: moves while you hold a key, Stop, Home, and the spindle, air, water, laser beam or pen, on the keys you choose. One device can serve many machines, and only the window in front listens."),
             ("The project on the material", "In MillCreator's 3D view the shapes of the drawing can lie on top of the material, in the colours of their layers, so you can compare them with what the bit will cut."),
             ("Superman, Batman and Joker", "Three new colour schemes for the window, with Joker in a dark and a light version, 18 in all."),
-            ("AxiDraw, EggBot and HPGL plotters", "PenCreator also drives plotters that do not speak G-code: the AxiDraw and the EggBot (EiBotBoard) and HPGL plotters on a serial port. Not tried on real ones yet."),
+            ("AxiDraw, EggBot and HPGL plotters", "PenCreator also drives plotters that do not speak G-code: the AxiDraw and the EggBot (EiBotBoard) and HPGL plotters on a serial port."),
             ("Paste a picture", "Ctrl+V with a screenshot or a picture copied from a browser opens the import window, with its levels, zoom and size."),
             ("Keys for the nodes", "In node editing D deletes, I inserts, L and S make a line or a curve, C a corner, R rounds and B breaks; a node dropped onto another joins them."),
+            ("Cut with a drag knife", "PenCreator and MillCreator cut vinyl, paper, card and rubber with a drag knife: the offset of the tip is made good at every corner, the holes are cut first and every closed outline closes."),
+            ("A knife library", "Ready-made 30°, 45° and 60° blades and a drag knife in a holder of a CNC machine, and knives of your own with their offset, corners, overcut and notes, kept with your settings."),
+            ("HPGL cutters their own way", "Every HPGL plotter or cutter gets its own commands, on a page of the device that only such devices have: the start and the end, knife down and up, the speed with a top limit and the force."),
         ],
         "plugins_title": "Plugins",
         "plugins_text": "Install generators, importers and G-code postprocessors from the official list with one click: Settings → Plugins… → Official plugins. Each one runs in a sandbox and works in every program that can use it.",
@@ -161,21 +161,18 @@ T = {
                 "text": "Otwartoźródłowy program do grawerek i wycinarek laserowych. Warstwy cięcia, grawerowanie liniami, wypełnieniem i obrazem z sześcioma metodami ditheringu, nakładka z kamery, podgląd ścieżek z czasem pracy i przeglądarka G-code.",
                 "points": ["GRBL (od 0.7 do 1.1 i nowszych) i Marlin przez port szeregowy lub sieć", "Zadania dla Ruida / Trocen jako PLT / DXF", "Przetestowany na laserze diodowym Sculpfun S9"],
                 "shots": ["Edytor z zakładką Właściwości", "Podgląd zadania"],
-                "status": "Działa na prawdziwej maszynie",
             },
             "mc": {
                 "tag": "Frezarki CNC",
                 "text": "Warstwy z operacją (na zewnątrz, wewnątrz, po linii, kieszeń, wiercenie) i frezem z biblioteki, podgląd materiału w 3D, grawerowanie obrazów i relief 3D, wysyłanie do GRBL (od 0.7 do 1.1 i nowszych) z sondowaniem i makrami.",
                 "points": ["Biblioteka frezów, siedem rodzajów", "Widok 3D i animowana symulacja", "Przetestowany na TwoTrees TTC450Pro"],
                 "shots": ["Podgląd cięć w 3D", "Zakładka Sterowanie: START / STOP, pozycja, ruch"],
-                "status": "Działa na prawdziwej maszynie",
             },
             "pc": {
                 "tag": "Plotery pisakowe",
                 "text": "Pisaki jako warstwy: kolor, grubość, prędkość, kontur i wypełnienie liniami. Podgląd rysowania z ruchami przy podniesionym pisaku, liczbą podniesień i czasem, porządkowanie kresek i pauza na zmianę pisaka.",
                 "points": ["Podnoszenie pisaka osią Z lub serwem, GRBL od 0.7 do 1.1 i nowszych, plotery AxiDraw / EggBot i HPGL", "Biblioteka pisaków ze śladem każdego z nich", "Obrazy rysowane kropkami lub kreskowaniem", ("Testowany na ploterze zbudowanym na wzór ", "Drawing Robot", DRAWING_ROBOT, " (Arduino UNO, CNC Shield, GRBL)")],
                 "shots": ["Podgląd rysowania", "Pisaki jako warstwy"],
-                "status": "Działa na prawdziwej maszynie",
             },
             "bc": {
                 "tag": "Rysowanie, bez maszyny",
@@ -204,7 +201,7 @@ T = {
             ("Obrysuj pracę przed startem", "Obejdź zadanie, zanim je uruchomisz: prostokąt w każdym programie, a w LightCreatorze także linię otaczającą wszystkie kształty, jak gumka."),
             ("Element po elemencie", "Wypalaj, wycinaj lub rysuj każdy element w całości, ze wszystkimi warstwami i przejściami, zanim zacznie się następny, albo tylko to, co zaznaczysz: dwa przełączniki w zakładce Sterowanie."),
             ("Kamera obok rysunku", "Obraz z kamery na żywo (także strumień RTSP) jako karta obok rysunków, dopasowany do okna, albo w osobnym oknie, ze zdjęciami, wideo i poklatkowym co N sekund lub po każdej warstwie, do wybranego katalogu."),
-            ("Zmiana pisaka w miejscu maszyny", "PenCreator jedzie w miejsce zmiany pisaka, wykonuje G-code Twojego mechanizmu i zatrzymuje się tam. Jeszcze nie sprawdzone na prawdziwym ploterze."),
+            ("Zmiana pisaka w miejscu maszyny", "PenCreator jedzie w miejsce zmiany pisaka, wykonuje G-code Twojego mechanizmu i zatrzymuje się tam."),
             ("Sfrezowany element w 3D", "MillCreator pokazuje materiał tak, jak zostanie sfrezowany, z prawdziwym kształtem każdego freza (na walcu, gdy wybrana jest przystawka obrotowa), i zapisuje go jako model STL. Własny G-code i układ współrzędnych roboczych (G54 do G59) są w ustawieniach urządzenia."),
             ("Podgląd jako karta", "Przypnij podgląd obok rysunków, w każdym programie, albo zostaw go w oknie. Wtyczki z ustawieniami, jak G-code tools, mają własną kartę."),
             ("Poziomy dla obrazów", "Histogram z punktem czerni i bieli przy imporcie i korekcie obrazu oraz okno trace, które przybliża kontury."),
@@ -214,9 +211,12 @@ T = {
             ("Klawiatury i pady USB", "Steruj maszyną padem albo klawiaturą: ruch, dopóki trzymasz klawisz, Stop, bazowanie oraz wrzeciono, powietrze, woda, wiązka lasera albo pisak na wybranych klawiszach. Jedno urządzenie może obsługiwać wiele maszyn, a naciśnięcia odbiera tylko okno na wierzchu."),
             ("Projekt na materiale", "W widoku 3D MillCreatora kształty rysunku mogą leżeć na wierzchu materiału, w kolorach warstw, żeby porównać je z tym, co wytnie frez."),
             ("Superman, Batman i Joker", "Trzy nowe schematy kolorów okna, a Joker w wersji ciemnej i jasnej. Razem jest ich 18."),
-            ("Plotery AxiDraw, EggBot i HPGL", "PenCreator steruje też ploterami, które nie mówią G-code: AxiDraw i EggBot (EiBotBoard) oraz plotery HPGL na porcie szeregowym. Jeszcze niesprawdzone na prawdziwych."),
+            ("Plotery AxiDraw, EggBot i HPGL", "PenCreator steruje też ploterami, które nie mówią G-code: AxiDraw i EggBot (EiBotBoard) oraz plotery HPGL na porcie szeregowym."),
             ("Wklejanie obrazu", "Ctrl+V ze zrzutem ekranu albo obrazem skopiowanym z przeglądarki otwiera okno importu z poziomami, powiększeniem i rozmiarem."),
             ("Klawisze węzłów", "W edycji węzłów D usuwa, I wstawia, L i S robią linię albo krzywą, C narożnik, R zaokrągla, a B rozdziela; węzeł upuszczony na inny łączy się z nim."),
+            ("Cięcie nożem wleczonym", "PenCreator i MillCreator tną folię, papier, karton i gumę nożem wleczonym: przesunięcie czubka jest korygowane na każdym narożu, otwory są cięte najpierw, a każdy zamknięty obrys się domyka."),
+            ("Biblioteka noży", "Gotowe ostrza 30°, 45° i 60° oraz nóż wleczony w uchwycie maszyny CNC, a także własne noże z przesunięciem, narożami, docięciem i notatkami, zapisywane z ustawieniami."),
+            ("Plotery tnące HPGL po swojemu", "Każdy ploter lub ploter tnący HPGL dostaje własne polecenia, na stronie urządzenia, którą mają tylko takie urządzenia: początek i koniec, opuszczenie i podniesienie noża, prędkość z górną granicą i nacisk."),
         ],
         "plugins_title": "Wtyczki",
         "plugins_text": "Generatory, importery i postprocesory G-code instalujesz jednym kliknięciem z oficjalnej listy: Ustawienia → Wtyczki… → Oficjalne wtyczki. Każda działa w piaskownicy i we wszystkich programach, które mogą jej użyć.",
@@ -279,6 +279,9 @@ ICONS = {
     24: '<path d="M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z"/><path d="m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18"/><path d="m2.3 2.3 7.286 7.286"/><circle cx="11" cy="11" r="2"/>',
     25: '<path d="M11 14h10"/><path d="M16 4h2a2 2 0 0 1 2 2v1.344"/><path d="m17 18 4-4-4-4"/><path d="M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 1.793-1.113"/><rect x="8" y="2" width="8" height="4" rx="1"/>',
     26: '<circle cx="19" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><path d="M5 17A12 12 0 0 1 17 5"/>',
+    27: '<circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/>',
+    28: '<path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/>',
+    29: '<path d="M21 4h-7"/><path d="M10 4H3"/><path d="M21 12h-9"/><path d="M8 12H3"/><path d="M21 20h-5"/><path d="M12 20H3"/><path d="M14 2v4"/><path d="M8 10v4"/><path d="M16 18v4"/>',
 }
 
 
@@ -326,7 +329,7 @@ def page(lang):
     cards = []
     for i, (aid, repo, icon, shots) in enumerate(APPS):
         a = t["apps"][aid]
-        early = ""
+        status = f'<span class="status">{esc(a["status"])}</span> ' if a.get("status") else ""
         pts = "".join(f"<li>{CHECK}{point(p)}</li>" for p in a["points"])
         figs = "".join(
             f'<figure><img src="{up}img/{s}.webp" alt="{esc(cap)}" width="1280" height="800" loading="lazy"><figcaption>{esc(cap)}</figcaption></figure>'
@@ -339,7 +342,7 @@ def page(lang):
             <img src="{up}img/{icon}.png" alt="" width="64" height="64">
             <div><h3>{name_of(repo)}</h3><p class="tag">{esc(a["tag"])}</p></div>
           </header>
-          <span class="status{early}">{esc(a["status"])}</span> <span class="ver">{VERSIONS[repo]}</span>
+          {status}<span class="ver">{VERSIONS[repo]}</span>
           <p>{esc(a["text"])}</p>
           <ul class="checks">{pts}</ul>
           <div class="actions">
