@@ -109,6 +109,9 @@ T = {
             ("Cut with a drag knife", "PenCreator and MillCreator cut vinyl, paper, card and rubber with a drag knife: the offset of the tip is made good at every corner, the holes are cut first and every closed outline closes."),
             ("A knife library", "Ready-made 30°, 45° and 60° blades and a drag knife in a holder of a CNC machine, and knives of your own with their offset, corners, overcut and notes, kept with your settings."),
             ("HPGL cutters their own way", "Every HPGL plotter or cutter gets its own commands, on a page of the device that only such devices have: the start and the end, knife down and up, the speed with a top limit and the force."),
+            ("Style trace", "Draw a picture again as lines in one of 19 styles, to burn, mill or plot: squiggles, a spiral, waves, halftone circles, etching, line art, a sketch and more, with a live preview."),
+            ("Stippling and one line", "Dots spread by the tone of the picture, or the same dots joined into one continuous line that never crosses itself, drawn without lifting the pen."),
+            ("Flow lines and hatching", "Long lines that flow along the shapes of the picture, closer together in the shadows, or hatching in layers like an old engraving."),
         ],
         "plugins_title": "Plugins",
         "plugins_text": "Install generators, importers and G-code postprocessors from the official list with one click: Settings → Plugins… → Official plugins. Each one runs in a sandbox and works in every program that can use it.",
@@ -217,6 +220,9 @@ T = {
             ("Cięcie nożem wleczonym", "PenCreator i MillCreator tną folię, papier, karton i gumę nożem wleczonym: przesunięcie czubka jest korygowane na każdym narożu, otwory są cięte najpierw, a każdy zamknięty obrys się domyka."),
             ("Biblioteka noży", "Gotowe ostrza 30°, 45° i 60° oraz nóż wleczony w uchwycie maszyny CNC, a także własne noże z przesunięciem, narożami, docięciem i notatkami, zapisywane z ustawieniami."),
             ("Plotery tnące HPGL po swojemu", "Każdy ploter lub ploter tnący HPGL dostaje własne polecenia, na stronie urządzenia, którą mają tylko takie urządzenia: początek i koniec, opuszczenie i podniesienie noża, prędkość z górną granicą i nacisk."),
+            ("Obrys w stylu", "Narysuj obraz na nowo liniami w jednym z 19 stylów, do wypalenia, frezowania lub rysowania: wężyki, spirala, fale, koła rastra, akwaforta, rysunek konturowy, szkic i inne, z podglądem na żywo."),
+            ("Puentylizm i jedna linia", "Kropki rozłożone według tonu obrazu albo te same kropki połączone w jedną ciągłą linię, która się nie przecina, rysowaną bez podnoszenia pisaka."),
+            ("Linie przepływu i kreskowanie", "Długie linie płynące wzdłuż kształtów obrazu, gęstsze w cieniach, albo kreskowanie warstwami jak w dawnej rycinie."),
         ],
         "plugins_title": "Wtyczki",
         "plugins_text": "Generatory, importery i postprocesory G-code instalujesz jednym kliknięciem z oficjalnej listy: Ustawienia → Wtyczki… → Oficjalne wtyczki. Każda działa w piaskownicy i we wszystkich programach, które mogą jej użyć.",
@@ -282,6 +288,9 @@ ICONS = {
     27: '<circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/>',
     28: '<path d="M12 7v14"/><path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/>',
     29: '<path d="M21 4h-7"/><path d="M10 4H3"/><path d="M21 12h-9"/><path d="M8 12H3"/><path d="M21 20h-5"/><path d="M12 20H3"/><path d="M14 2v4"/><path d="M8 10v4"/><path d="M16 18v4"/>',
+    30: '<path d="m14.622 17.897-10.68-2.913"/><path d="M18.376 2.622a1 1 0 1 1 3.002 3.002L17.36 9.643a.5.5 0 0 0 0 .707l.944.944a2.41 2.41 0 0 1 0 3.408l-.944.944a.5.5 0 0 1-.707 0L8.354 7.348a.5.5 0 0 1 0-.707l.944-.944a2.41 2.41 0 0 1 3.408 0l.944.944a.5.5 0 0 0 .707 0z"/><path d="M9 8c-1.804 2.71-3.97 3.46-6.583 3.948a.507.507 0 0 0-.302.819l7.32 8.883a1 1 0 0 0 1.185.204C12.735 20.405 16 16.792 16 15"/>',
+    31: '<circle cx="6" cy="6" r="1"/><circle cx="12" cy="6" r="1"/><circle cx="18" cy="6" r="1"/><circle cx="9" cy="12" r="1"/><circle cx="15" cy="12" r="1"/><circle cx="6" cy="18" r="1"/><circle cx="12" cy="18" r="1"/><circle cx="18" cy="18" r="1"/>',
+    32: '<path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>',
 }
 
 
