@@ -112,6 +112,9 @@ T = {
             ("Style trace", "Draw a picture again as lines in one of 19 styles, to burn, mill or plot: squiggles, a spiral, waves, halftone circles, etching, line art, a sketch and more, with a live preview."),
             ("Stippling and one line", "Dots spread by the tone of the picture, or the same dots joined into one continuous line that never crosses itself, drawn without lifting the pen."),
             ("Flow lines and hatching", "Long lines that flow along the shapes of the picture, closer together in the shadows, or hatching in layers like an old engraving."),
+            ("A panel for each camera", "The Recording tab has a panel for every camera of the machine, named after it: photo, video and time-lapse, each camera on its own with its own settings and folder."),
+            ("Time-lapse with the head out of the way", "LightCreator, MillCreator and PenCreator move the head aside for every picture of a time-lapse, take it, come back and go on with the job. A mill waits for its next lift, and can take a picture at every lift."),
+            ("Long lines in parts", "Long straight cuts can be sent as 2 to 256 shorter lines, so a job stops sooner for a photo or a pause and its progress moves evenly. The path stays the same."),
         ],
         "plugins_title": "Plugins",
         "plugins_text": "Install generators, importers and G-code postprocessors from the official list with one click: Settings → Plugins… → Official plugins. Each one runs in a sandbox and works in every program that can use it.",
@@ -223,6 +226,9 @@ T = {
             ("Obrys w stylu", "Narysuj obraz na nowo liniami w jednym z 19 stylów, do wypalenia, frezowania lub rysowania: wężyki, spirala, fale, koła rastra, akwaforta, rysunek konturowy, szkic i inne, z podglądem na żywo."),
             ("Puentylizm i jedna linia", "Kropki rozłożone według tonu obrazu albo te same kropki połączone w jedną ciągłą linię, która się nie przecina, rysowaną bez podnoszenia pisaka."),
             ("Linie przepływu i kreskowanie", "Długie linie płynące wzdłuż kształtów obrazu, gęstsze w cieniach, albo kreskowanie warstwami jak w dawnej rycinie."),
+            ("Panel dla każdej kamery", "Karta Nagrywanie ma panel dla każdej kamery maszyny, nazwany jak ona: zdjęcie, wideo i poklatkowe, każda kamera osobno, z własnymi ustawieniami i folderem."),
+            ("Poklatkowe z głowicą z boku", "LightCreator, MillCreator i PenCreator odsuwają głowicę na bok do każdego zdjęcia poklatkowego, robią je, wracają i prowadzą pracę dalej. Frezarka czeka na najbliższe podniesienie i może robić zdjęcie przy każdym podniesieniu."),
+            ("Długie linie w częściach", "Długie proste cięcia można wysyłać jako 2 do 256 krótszych linii, więc praca szybciej zatrzymuje się do zdjęcia lub na pauzę, a postęp rośnie równiej. Ścieżka zostaje ta sama."),
         ],
         "plugins_title": "Wtyczki",
         "plugins_text": "Generatory, importery i postprocesory G-code instalujesz jednym kliknięciem z oficjalnej listy: Ustawienia → Wtyczki… → Oficjalne wtyczki. Każda działa w piaskownicy i we wszystkich programach, które mogą jej użyć.",
@@ -291,6 +297,9 @@ ICONS = {
     30: '<path d="m14.622 17.897-10.68-2.913"/><path d="M18.376 2.622a1 1 0 1 1 3.002 3.002L17.36 9.643a.5.5 0 0 0 0 .707l.944.944a2.41 2.41 0 0 1 0 3.408l-.944.944a.5.5 0 0 1-.707 0L8.354 7.348a.5.5 0 0 1 0-.707l.944-.944a2.41 2.41 0 0 1 3.408 0l.944.944a.5.5 0 0 0 .707 0z"/><path d="M9 8c-1.804 2.71-3.97 3.46-6.583 3.948a.507.507 0 0 0-.302.819l7.32 8.883a1 1 0 0 0 1.185.204C12.735 20.405 16 16.792 16 15"/>',
     31: '<circle cx="6" cy="6" r="1"/><circle cx="12" cy="6" r="1"/><circle cx="18" cy="6" r="1"/><circle cx="9" cy="12" r="1"/><circle cx="15" cy="12" r="1"/><circle cx="6" cy="18" r="1"/><circle cx="12" cy="18" r="1"/><circle cx="18" cy="18" r="1"/>',
     32: '<path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/>',
+    33: '<path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/>',
+    34: '<circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2"/><path d="M5 3 2 6"/><path d="m22 6-3-3"/>',
+    35: '<path d="M3 12h3"/><path d="M9 12h2"/><path d="M14 12h2"/><path d="M19 12h2"/><circle cx="3" cy="12" r="1"/><circle cx="21" cy="12" r="1"/>',
 }
 
 
