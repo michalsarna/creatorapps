@@ -14,6 +14,16 @@ GH = "https://github.com/michalsarna/"
 BMC = "https://buymeacoffee.com/michalsarna"
 PLUGINS = "https://michalsarna.github.io/baseCreator-plugins/"
 DRAWING_ROBOT = "https://www.printables.com/model/137296-drawing-robot-arduino-uno-cnc-shield-grbl"
+GH_USER = "https://github.com/michalsarna/"
+
+
+def tested(repo):
+    """The list of the machines a program is confirmed to work on."""
+    return GH_USER + repo + "/blob/main/TESTS_ON_DEVICES.md"
+
+
+def new_issue(repo):
+    return GH_USER + repo + "/issues/new"
 
 APPS = [
     # id, repo, icon, screenshots
@@ -51,19 +61,19 @@ T = {
             "lc": {
                 "tag": "Laser engravers and cutters",
                 "text": "An open-source program for laser engravers and cutters. Cut layers, line, fill and image engraving with six dithering methods, a camera overlay, a toolpath preview with the time of the job and a G-code viewer.",
-                "points": ["GRBL (0.7 to 1.1 and newer) and Marlin over a serial port or the network", "Ruida / Trocen jobs as PLT / DXF", "Tested on a Sculpfun S9 diode laser"],
+                "points": ["GRBL (0.7 to 1.1 and newer) and Marlin over a serial port or the network", "Ruida / Trocen jobs as PLT / DXF", ("", "Tested on a Sculpfun S9 diode laser", tested("LightCreator"), "")],
                 "shots": ["The editor with the Properties tab", "The preview of a job"],
             },
             "mc": {
                 "tag": "CNC milling machines",
                 "text": "Layers with an operation (outside, inside, on the line, pocket, drill) and a bit from the library, a 3D preview of the material, picture engraving and 3D relief, streaming to GRBL (0.7 to 1.1 and newer) with probing and macros.",
-                "points": ["Bit library with seven kinds of bits", "3D view and an animated simulation", "Tested on a TwoTrees TTC450Pro"],
+                "points": ["Bit library with seven kinds of bits", "3D view and an animated simulation", ("", "Tested on a TwoTrees TTC450Pro", tested("MillCreator"), "")],
                 "shots": ["The 3D preview of the cuts", "The Control tab: START / STOP, position, jogging"],
             },
             "pc": {
                 "tag": "Pen plotters",
                 "text": "Pens as layers: colour, width, speed, outline and fill lines. A plot preview with the pen-up moves, the number of lifts and the time, stroke ordering to shorten the moves, and a pause to change the pen.",
-                "points": ["Z axis or a servo pen lift, GRBL 0.7 to 1.1 and newer, AxiDraw / EggBot and HPGL plotters", "Pen library with the mark each pen makes", "Pictures drawn with dots or hatching", ("Tested on a pen plotter built after the ", "Drawing Robot", DRAWING_ROBOT, " (Arduino UNO, CNC Shield, GRBL)")],
+                "points": ["Z axis or a servo pen lift, GRBL 0.7 to 1.1 and newer, AxiDraw / EggBot and HPGL plotters", "Pen library with the mark each pen makes", "Pictures drawn with dots or hatching", ["Tested on a pen plotter built after the ", ("Drawing Robot", DRAWING_ROBOT), " (Arduino UNO, CNC Shield, GRBL) · ", ("tested devices", tested("PenCreator"))]],
                 "shots": ["The plot preview", "Pens as layers"],
             },
             "bc": {
@@ -140,8 +150,8 @@ T = {
         "support_other_title": "Other ways to help",
         "support_other": [
             ("Star the repositories", "it helps other makers find the programs"),
-            ("Report bugs and ideas", "in the Issues tab of each repository"),
-            ("Test on your machine", "and tell how it went, especially plotters and Marlin"),
+            ("Report bugs and ideas", "in the Issues of each repository:", [("LightCreator", new_issue("LightCreator")), ("MillCreator", new_issue("MillCreator")), ("PenCreator", new_issue("PenCreator")), ("BaseCreator", new_issue("baseCreator"))]),
+            ("Test on your machine", "and tell how it went, especially plotters and Marlin; the machines tested so far:", [("LightCreator", tested("LightCreator")), ("MillCreator", tested("MillCreator")), ("PenCreator", tested("PenCreator"))]),
             ("Improve a translation", "or add clipart and materials"),
         ],
         "footer": "Made by Michał Sarna · MIT or Apache-2.0",
@@ -165,19 +175,19 @@ T = {
             "lc": {
                 "tag": "Grawerki i wycinarki laserowe",
                 "text": "Otwartoźródłowy program do grawerek i wycinarek laserowych. Warstwy cięcia, grawerowanie liniami, wypełnieniem i obrazem z sześcioma metodami ditheringu, nakładka z kamery, podgląd ścieżek z czasem pracy i przeglądarka G-code.",
-                "points": ["GRBL (od 0.7 do 1.1 i nowszych) i Marlin przez port szeregowy lub sieć", "Zadania dla Ruida / Trocen jako PLT / DXF", "Przetestowany na laserze diodowym Sculpfun S9"],
+                "points": ["GRBL (od 0.7 do 1.1 i nowszych) i Marlin przez port szeregowy lub sieć", "Zadania dla Ruida / Trocen jako PLT / DXF", ("", "Przetestowany na laserze diodowym Sculpfun S9", tested("LightCreator"), "")],
                 "shots": ["Edytor z zakładką Właściwości", "Podgląd zadania"],
             },
             "mc": {
                 "tag": "Frezarki CNC",
                 "text": "Warstwy z operacją (na zewnątrz, wewnątrz, po linii, kieszeń, wiercenie) i frezem z biblioteki, podgląd materiału w 3D, grawerowanie obrazów i relief 3D, wysyłanie do GRBL (od 0.7 do 1.1 i nowszych) z sondowaniem i makrami.",
-                "points": ["Biblioteka frezów, siedem rodzajów", "Widok 3D i animowana symulacja", "Przetestowany na TwoTrees TTC450Pro"],
+                "points": ["Biblioteka frezów, siedem rodzajów", "Widok 3D i animowana symulacja", ("", "Przetestowany na TwoTrees TTC450Pro", tested("MillCreator"), "")],
                 "shots": ["Podgląd cięć w 3D", "Zakładka Sterowanie: START / STOP, pozycja, ruch"],
             },
             "pc": {
                 "tag": "Plotery pisakowe",
                 "text": "Pisaki jako warstwy: kolor, grubość, prędkość, kontur i wypełnienie liniami. Podgląd rysowania z ruchami przy podniesionym pisaku, liczbą podniesień i czasem, porządkowanie kresek i pauza na zmianę pisaka.",
-                "points": ["Podnoszenie pisaka osią Z lub serwem, GRBL od 0.7 do 1.1 i nowszych, plotery AxiDraw / EggBot i HPGL", "Biblioteka pisaków ze śladem każdego z nich", "Obrazy rysowane kropkami lub kreskowaniem", ("Testowany na ploterze zbudowanym na wzór ", "Drawing Robot", DRAWING_ROBOT, " (Arduino UNO, CNC Shield, GRBL)")],
+                "points": ["Podnoszenie pisaka osią Z lub serwem, GRBL od 0.7 do 1.1 i nowszych, plotery AxiDraw / EggBot i HPGL", "Biblioteka pisaków ze śladem każdego z nich", "Obrazy rysowane kropkami lub kreskowaniem", ["Testowany na ploterze zbudowanym na wzór ", ("Drawing Robot", DRAWING_ROBOT), " (Arduino UNO, CNC Shield, GRBL) · ", ("sprawdzone urządzenia", tested("PenCreator"))]],
                 "shots": ["Podgląd rysowania", "Pisaki jako warstwy"],
             },
             "bc": {
@@ -254,8 +264,8 @@ T = {
         "support_other_title": "Inne sposoby pomocy",
         "support_other": [
             ("Daj gwiazdkę repozytoriom", "dzięki temu inni łatwiej znajdą programy"),
-            ("Zgłaszaj błędy i pomysły", "w zakładce Issues każdego repozytorium"),
-            ("Przetestuj na swojej maszynie", "i opisz wynik, zwłaszcza plotery i Marlin"),
+            ("Zgłaszaj błędy i pomysły", "w Issues każdego repozytorium:", [("LightCreator", new_issue("LightCreator")), ("MillCreator", new_issue("MillCreator")), ("PenCreator", new_issue("PenCreator")), ("BaseCreator", new_issue("baseCreator"))]),
+            ("Przetestuj na swojej maszynie", "i opisz wynik, zwłaszcza plotery i Marlin; dotąd sprawdzone maszyny:", [("LightCreator", tested("LightCreator")), ("MillCreator", tested("MillCreator")), ("PenCreator", tested("PenCreator"))]),
             ("Popraw tłumaczenie", "albo dodaj cliparty i materiały"),
         ],
         "footer": "Autor: Michał Sarna · MIT lub Apache-2.0",
@@ -330,9 +340,11 @@ def esc(s):
 
 
 def point(p):
-    """A line of a card: a text, or (before, link text, url, after)."""
+    """A line of a card: a text, (before, link text, url, after), or a list of texts and (link text, url)."""
     if isinstance(p, str):
         return esc(p)
+    if isinstance(p, list):
+        return "".join(esc(x) if isinstance(x, str) else f'<a href="{x[1]}">{esc(x[0])}</a>' for x in p)
     before, label, url, after = p
     return f'{esc(before)}<a href="{url}">{esc(label)}</a>{esc(after)}'
 
@@ -385,7 +397,11 @@ def page(lang):
     )
     th = "".join(f'<th scope="col">{c}</th>' for c in t["dl_cols"])
     pkg = "".join(f'<tr><th scope="row">{esc(system)}</th><td><code>{esc(cmd)}</code></td></tr>' for system, cmd in t["dl_pkg_rows"])
-    other = "".join(f"<li><strong>{esc(h)}</strong> {esc(p)}</li>" for h, p in t["support_other"])
+    def other_item(item):
+        h, p, *links = item
+        more = " " + " · ".join(f'<a href="{u}">{esc(n)}</a>' for n, u in links[0]) if links else ""
+        return f"<li><strong>{esc(h)}</strong> {esc(p)}{more}</li>"
+    other = "".join(other_item(i) for i in t["support_other"])
     url = BASE + t["path"]
 
     return f"""<!doctype html>
