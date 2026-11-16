@@ -125,6 +125,9 @@ T = {
             ("A panel for each camera", "The Recording tab has a panel for every camera of the machine, named after it: photo, video and time-lapse, each camera on its own with its own settings and folder."),
             ("Time-lapse with the head out of the way", "LightCreator, MillCreator and PenCreator move the head aside for every picture of a time-lapse, take it, come back and go on with the job. A mill waits for its next lift, and can take a picture at every lift."),
             ("Long lines in parts", "Long straight cuts can be sent as 2 to 256 shorter lines, so a job stops sooner for a photo or a pause and its progress moves evenly. The path stays the same."),
+            ("Picture styles at a glance", "Select a picture and a side tab shows all 21 styles drawn on a small triangle; a click opens Style trace on that style."),
+            ("A photo editor", "Touch up a picture before you burn, mill or plot it: a brush, an eraser, a clone stamp and a fill, in greys, with undo."),
+            ("Shapes into a picture", "Turn the selected shapes into one picture, at the resolution and size you choose, filled or as lines, with a preview."),
         ],
         "plugins_title": "Plugins",
         "plugins_text": "Install generators, importers and G-code postprocessors from the official list with one click: Settings → Plugins… → Official plugins. Each one runs in a sandbox and works in every program that can use it.",
@@ -239,6 +242,9 @@ T = {
             ("Panel dla każdej kamery", "Karta Nagrywanie ma panel dla każdej kamery maszyny, nazwany jak ona: zdjęcie, wideo i poklatkowe, każda kamera osobno, z własnymi ustawieniami i folderem."),
             ("Poklatkowe z głowicą z boku", "LightCreator, MillCreator i PenCreator odsuwają głowicę na bok do każdego zdjęcia poklatkowego, robią je, wracają i prowadzą pracę dalej. Frezarka czeka na najbliższe podniesienie i może robić zdjęcie przy każdym podniesieniu."),
             ("Długie linie w częściach", "Długie proste cięcia można wysyłać jako 2 do 256 krótszych linii, więc praca szybciej zatrzymuje się do zdjęcia lub na pauzę, a postęp rośnie równiej. Ścieżka zostaje ta sama."),
+            ("Style obrazu w jednym miejscu", "Zaznacz obraz, a karta z boku pokaże wszystkie 21 stylów narysowanych na małym trójkącie; kliknięcie otwiera Obrysuj w stylu na tym stylu."),
+            ("Edytor zdjęć", "Popraw obraz przed wypalaniem, frezowaniem albo rysowaniem: pędzel, gumka, klonowanie i wypełnianie, w szarościach, z cofaniem."),
+            ("Kształty jako obraz", "Zamień zaznaczone kształty na jeden obraz w wybranej rozdzielczości i rozmiarze, wypełnione albo jako linie, z podglądem."),
         ],
         "plugins_title": "Wtyczki",
         "plugins_text": "Generatory, importery i postprocesory G-code instalujesz jednym kliknięciem z oficjalnej listy: Ustawienia → Wtyczki… → Oficjalne wtyczki. Każda działa w piaskownicy i we wszystkich programach, które mogą jej użyć.",
@@ -310,6 +316,9 @@ ICONS = {
     33: '<path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/>',
     34: '<circle cx="12" cy="13" r="8"/><path d="M12 9v4l2 2"/><path d="M5 3 2 6"/><path d="m22 6-3-3"/>',
     35: '<path d="M3 12h3"/><path d="M9 12h2"/><path d="M14 12h2"/><path d="M19 12h2"/><circle cx="3" cy="12" r="1"/><circle cx="21" cy="12" r="1"/>',
+    36: '<path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z" /> <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" /> <circle cx="17.5" cy="10.5" r=".5" fill="currentColor" /> <circle cx="6.5" cy="12.5" r=".5" fill="currentColor" /> <circle cx="8.5" cy="7.5" r=".5" fill="currentColor" />',
+    37: '<path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08" /> <path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z" />',
+    38: '<path d="M16 5h6" /> <path d="M19 2v6" /> <path d="M21 11.5V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7.5" /> <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /> <circle cx="9" cy="9" r="2" />',
 }
 
 
