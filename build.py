@@ -90,7 +90,7 @@ T = {
         "together_text": "All four programs share one core, so a new tool or fix lands in every one of them.",
         "features": [
             ("30 languages", "Polish, English, German, Spanish, Chinese, Hindi, Greek and more. Switch in the start window."),
-            ("Windows, macOS, Linux", "Installers for Windows, .dmg for Apple silicon and Intel, .deb, .rpm and .tar.gz for x86_64 and ARM64."),
+            ("Windows, macOS, Linux, FreeBSD", "Installers for Windows, .dmg for Apple silicon and Intel, .deb, .rpm and .tar.gz for x86_64 and ARM64, and a .tar.gz for FreeBSD (x86_64)."),
             ("Free and open", "MIT or Apache-2.0. No account, no subscription, no telemetry."),
             ("The same files everywhere", "Every program reads and writes the files of LightBurn and MillMage (.lbrn2, .lbrn, .mage), DXF (current and R12), Illustrator and SVG with pictures; it also imports PDF, bitmaps with tracing and UGS Designer designs, and exports PLT."),
             ("A shared clipart gallery", "310 pictures in 9 categories, your own pictures and online search of open icon collections."),
@@ -207,7 +207,7 @@ T = {
         "together_text": "Wszystkie cztery programy mają wspólny rdzeń, więc nowe narzędzie albo poprawka trafia do każdego z nich.",
         "features": [
             ("30 języków", "Polski, angielski, niemiecki, hiszpański, chiński, hindi, grecki i inne. Zmiana w oknie startowym."),
-            ("Windows, macOS, Linux", "Instalator dla Windows, .dmg dla Apple silicon i Intela, .deb, .rpm i .tar.gz dla x86_64 i ARM64."),
+            ("Windows, macOS, Linux, FreeBSD", "Instalator dla Windows, .dmg dla Apple silicon i Intela, .deb, .rpm i .tar.gz dla x86_64 i ARM64 oraz .tar.gz dla FreeBSD (x86_64)."),
             ("Darmowe i otwarte", "Licencja MIT lub Apache-2.0. Bez konta, bez abonamentu, bez telemetrii."),
             ("Te same pliki wszędzie", "Każdy program czyta i zapisuje pliki LightBurna i MillMage'a (.lbrn2, .lbrn, .mage), DXF (obecny i R12), Illustratora oraz SVG z obrazami; importuje też PDF, bitmapy z wektoryzacją i projekty UGS Designer, a eksportuje PLT."),
             ("Wspólna galeria clipartów", "310 obrazków w 9 kategoriach, własne obrazki i wyszukiwanie w otwartych kolekcjach ikon."),
@@ -331,7 +331,7 @@ def json_ld(lang):
             "name": name_of(repo),
             "description": t["apps"][aid]["text"],
             "applicationCategory": "DesignApplication",
-            "operatingSystem": "Windows, macOS, Linux",
+            "operatingSystem": "Windows, macOS, Linux, FreeBSD",
             "softwareVersion": VERSIONS[repo].lstrip("v"),
             "url": GH + repo,
             "downloadUrl": f"{GH}{repo}/releases/latest",
