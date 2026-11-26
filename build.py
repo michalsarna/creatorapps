@@ -128,6 +128,9 @@ T = {
             ("Picture styles at a glance", "Select a picture and a side tab shows all 21 styles drawn on a small triangle; a click opens Style trace on that style."),
             ("A photo editor", "Touch up a picture before you burn, mill or plot it: a brush, an eraser, a clone stamp and a fill, in greys, with undo."),
             ("Shapes into a picture", "Turn the selected shapes into one picture, at the resolution and size you choose, filled or as lines, with a preview."),
+            ("Projects with a password", "Protect a project with an owner password, and give an open password to those who may only open it, make the G-code, run the job and change the material: they cannot edit or copy the drawing. Encrypted with XChaCha20-Poly1305 and Argon2id."),
+            ("Who made the project", "The project file keeps its creator, the contributors and a table of the edits, with the name, the e-mail and the program. File → Project information shows them."),
+            ("Pictures from Illustrator", "An Illustrator or PDF file brings its photos as images where they lie, with their transparency; a hidden layer is left out."),
         ],
         "plugins_title": "Plugins",
         "plugins_text": "Install generators, importers and G-code postprocessors from the official list with one click: Settings → Plugins… → Official plugins. Each one runs in a sandbox and works in every program that can use it.",
@@ -245,6 +248,9 @@ T = {
             ("Style obrazu w jednym miejscu", "Zaznacz obraz, a karta z boku pokaże wszystkie 21 stylów narysowanych na małym trójkącie; kliknięcie otwiera Obrysuj w stylu na tym stylu."),
             ("Edytor zdjęć", "Popraw obraz przed wypalaniem, frezowaniem albo rysowaniem: pędzel, gumka, klonowanie i wypełnianie, w szarościach, z cofaniem."),
             ("Kształty jako obraz", "Zamień zaznaczone kształty na jeden obraz w wybranej rozdzielczości i rozmiarze, wypełnione albo jako linie, z podglądem."),
+            ("Projekty z hasłem", "Chroń projekt hasłem właściciela, a hasło otwarcia daj tym, którzy mogą go tylko otworzyć, zrobić G-code, uruchomić zadanie i zmienić materiał: rysunku nie edytują ani nie skopiują. Szyfrowanie XChaCha20-Poly1305 i Argon2id."),
+            ("Kto zrobił projekt", "Plik projektu pamięta twórcę, współtwórców i tabelę edycji, z imieniem, e-mailem i programem. Pokazuje je Plik → Informacje o projekcie."),
+            ("Obrazy z Illustratora", "Plik Illustratora lub PDF wnosi swoje zdjęcia jako obrazy tam, gdzie leżą, z przezroczystością; ukryta warstwa jest pomijana."),
         ],
         "plugins_title": "Wtyczki",
         "plugins_text": "Generatory, importery i postprocesory G-code instalujesz jednym kliknięciem z oficjalnej listy: Ustawienia → Wtyczki… → Oficjalne wtyczki. Każda działa w piaskownicy i we wszystkich programach, które mogą jej użyć.",
@@ -319,6 +325,9 @@ ICONS = {
     36: '<path d="M12 22a1 1 0 0 1 0-20 10 9 0 0 1 10 9 5 5 0 0 1-5 5h-2.25a1.75 1.75 0 0 0-1.4 2.8l.3.4a1.75 1.75 0 0 1-1.4 2.8z" /> <circle cx="13.5" cy="6.5" r=".5" fill="currentColor" /> <circle cx="17.5" cy="10.5" r=".5" fill="currentColor" /> <circle cx="6.5" cy="12.5" r=".5" fill="currentColor" /> <circle cx="8.5" cy="7.5" r=".5" fill="currentColor" />',
     37: '<path d="m9.06 11.9 8.07-8.06a2.85 2.85 0 1 1 4.03 4.03l-8.06 8.08" /> <path d="M7.07 14.94c-1.66 0-3 1.35-3 3.02 0 1.33-2.5 1.52-2 2.02 1.08 1.1 2.49 2.02 4 2.02 2.2 0 4-1.8 4-4.04a3.01 3.01 0 0 0-3-3.02z" />',
     38: '<path d="M16 5h6" /> <path d="M19 2v6" /> <path d="M21 11.5V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h7.5" /> <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" /> <circle cx="9" cy="9" r="2" />',
+    39: '<rect width="18" height="11" x="3" y="11" rx="2" ry="2" /> <path d="M7 11V7a5 5 0 0 1 10 0v4" />',
+    40: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /> <circle cx="9" cy="7" r="4" /> <path d="M22 21v-2a4 4 0 0 0-3-3.87" /> <path d="M16 3.13a4 4 0 0 1 0 7.75" />',
+    41: '<rect width="18" height="18" x="3" y="3" rx="2" ry="2" /> <circle cx="9" cy="9" r="2" /> <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />',
 }
 
 
