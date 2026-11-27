@@ -131,6 +131,9 @@ T = {
             ("Projects with a password", "Protect a project with an owner password, and give an open password to those who may only open it, make the G-code, run the job and change the material: they cannot edit or copy the drawing. Encrypted with XChaCha20-Poly1305 and Argon2id."),
             ("Who made the project", "The project file keeps its creator, the contributors and a table of the edits, with the name, the e-mail and the program. File → Project information shows them."),
             ("Pictures from Illustrator", "An Illustrator or PDF file brings its photos as images where they lie, with their transparency; a hidden layer is left out."),
+            ("A map of the G-code", "The G-code tab numbers its lines, names every shape beside it and lists the stages on the right: the start, the sides, the layers, the shapes, the stops and the end. A click takes you to the line."),
+            ("Only the work area", "What lies beside the work area is never burned, milled or drawn, nor shown in the preview: keep notes and spare drawings next to it. On a block each face takes only its own area."),
+            ("Fast fills and pockets", "Offset fills and pockets are made shape by shape on all the cores: six faces of a test block in half a second instead of minutes. Each release is measured on the same test project."),
         ],
         "plugins_title": "Plugins",
         "plugins_text": "Install generators, importers and G-code postprocessors from the official list with one click: Settings → Plugins… → Official plugins. Each one runs in a sandbox and works in every program that can use it.",
@@ -251,6 +254,9 @@ T = {
             ("Projekty z hasłem", "Chroń projekt hasłem właściciela, a hasło otwarcia daj tym, którzy mogą go tylko otworzyć, zrobić G-code, uruchomić zadanie i zmienić materiał: rysunku nie edytują ani nie skopiują. Szyfrowanie XChaCha20-Poly1305 i Argon2id."),
             ("Kto zrobił projekt", "Plik projektu pamięta twórcę, współtwórców i tabelę edycji, z imieniem, e-mailem i programem. Pokazuje je Plik → Informacje o projekcie."),
             ("Obrazy z Illustratora", "Plik Illustratora lub PDF wnosi swoje zdjęcia jako obrazy tam, gdzie leżą, z przezroczystością; ukryta warstwa jest pomijana."),
+            ("Mapa G-code", "Karta G-code numeruje wiersze, przy każdym kształcie pisze jego nazwę, a po prawej wypisuje etapy: początek, strony, warstwy, kształty, zatrzymania i koniec. Kliknięcie przenosi do wiersza."),
+            ("Tylko obszar roboczy", "To, co leży obok obszaru roboczego, nigdy nie jest wypalane, frezowane ani rysowane i nie ma go w podglądzie: trzymaj obok notatki i zapasowe rysunki. Na kostce każda ściana bierze tylko swój obszar."),
+            ("Szybkie wypełnienia i kieszenie", "Wypełnienia konturowe i kieszenie powstają kształt po kształcie na wszystkich rdzeniach: sześć ścian kostki testowej w pół sekundy zamiast minut. Każde wydanie jest mierzone na tym samym projekcie testowym."),
         ],
         "plugins_title": "Wtyczki",
         "plugins_text": "Generatory, importery i postprocesory G-code instalujesz jednym kliknięciem z oficjalnej listy: Ustawienia → Wtyczki… → Oficjalne wtyczki. Każda działa w piaskownicy i we wszystkich programach, które mogą jej użyć.",
@@ -328,6 +334,9 @@ ICONS = {
     39: '<rect width="18" height="11" x="3" y="11" rx="2" ry="2" /> <path d="M7 11V7a5 5 0 0 1 10 0v4" />',
     40: '<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" /> <circle cx="9" cy="7" r="4" /> <path d="M22 21v-2a4 4 0 0 0-3-3.87" /> <path d="M16 3.13a4 4 0 0 1 0 7.75" />',
     41: '<rect width="18" height="18" x="3" y="3" rx="2" ry="2" /> <circle cx="9" cy="9" r="2" /> <path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21" />',
+    42: '<path d="M10 6h11"/><path d="M10 12h11"/><path d="M10 18h11"/><path d="M4 6h1"/><path d="M4 12h1"/><path d="M4 18h1"/>',
+    43: '<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/>',
+    44: '<path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/>',
 }
 
 
